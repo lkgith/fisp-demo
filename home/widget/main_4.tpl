@@ -1,0 +1,3 @@
+<section class="cases"> 
+    	 				 		<div class="container"> <div class="hgroup"> <h1>客户案例</h1> </div> <div class="group"> <article> <figure> <img width="180" height="167" align="left" src="http://bce.baidu.com/img/product/common/ring.png?v=1438258829-0" /> <figcaption> <h3>铃声多多</h3> <p>铃声多多是中国最大的铃声应用,涵盖安卓、苹果、pc三大平台,覆盖上亿用户！使用对象存储BOS，存储量大，安全可靠稳定</p> </figcaption> </figure> </article> <article> <figure> <img width="180" height="167" align="left" src="http://bce.baidu.com/img/product/common/zhongce.png?v=1438258829-0" /> <figcaption> <h3>百度众测</h3> <p>百度众测平台使用户第一时间体验新产品，对象存储BOS支撑了众测不断增长的高容量存储和高并发访问需求</p> </figcaption> </figure> </article> </div> </div> 
+    	 				 	</section> 

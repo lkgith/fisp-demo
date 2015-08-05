@@ -1,0 +1,8 @@
+<ul>
+<% for ( var i = 0, len = videos.length; i < len; i++ ) { var item = videos[i]; %>
+	<li>
+		<a href="<%=item.url%>" <% if(item.update){ %>class="hot"<% } %> target="_blank"><%=item.title%></a>
+		<% if(item.date){ %><img src="http://vs4.bdstatic.com/short/icon_hot_tag.gif" alt="" /><% } %>
+	</li>
+<% } %>
+</ul>

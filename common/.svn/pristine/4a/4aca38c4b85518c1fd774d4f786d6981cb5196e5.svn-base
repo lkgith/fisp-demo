@@ -1,0 +1,23 @@
+<% /********************************************
+ *
+ * 文件注释，说明文件名称和文件所包含内容
+ * @file indexBannerTop.tmpl
+ * @author shangwenhe
+ * @create time 2015年06月03日10:51
+ * @version {版本信息}  v0.0.1
+ *
+*********************************************/ %>
+<%
+    var item = data && data[0] || [];
+    if( data && data.length >1 ){
+        item = data[Math.floor(Math.random() * data.length)];
+    }
+%>
+<% if(item && item.hot_day == 1){ %>
+    <div class="ad-top-banner" > 
+        <a href="<%=item.url%>" target="_blank" id="linkAdv984" static="stp=adv_top_984_90">
+            <img src="<%=item.imgh_url%>" alt="<%=item.title%>"/>
+        </a>
+        <a href="javascript:void(0)" class="btnTopBannerClose"></a>
+    </div>
+<% } %>

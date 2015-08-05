@@ -1,0 +1,105 @@
+// 普通头部
+#header {
+	height: 111px;
+	.hd-inner2 {
+		position: relative;
+		z-index: 1000;
+		width: 1235px;
+		height: 111px;
+		margin: 0 auto;
+	}
+	.w984{
+		width:984px;
+	}
+	.hd-trace {
+		float: left;
+		padding: 41px 0 0 9px;
+	}
+	.hd-record {
+		float: left;
+		padding-top: 41px;
+	}
+	.hd-keyword {
+		position: absolute;
+		top: 77px;
+		left: 148px;
+		width: 685px;
+		height: 24px;
+		overflow: hidden;
+	}
+	.hd-qlinks, .hd-nav {
+		display: none;
+	}
+}
+
+// 适配吸顶头部UI
+#header.hdmini {
+	.hd-inner {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+		width: 100%;
+		height: 69px;
+		border-bottom: 2px solid #4e558a;
+		background: #FFF;
+		background: rgba(255, 255, 255, 0.97);
+	}
+	.hd-inner2 {
+		width: auto;
+		max-width: 1245px;
+		height: 69px;
+	}
+	.w984{
+		width:984px;
+	}
+	.hd-nav {
+		display: block;
+		position: absolute;
+		top: 14px;
+		left: 159px;
+		width: 205px;
+	}
+	.hd-trace, .hd-keyword {
+		display: none;
+	}
+	.hd-record {
+        display: block;
+		position: absolute;
+		top: 20px;
+		right: 0;
+		padding-top: 0;
+	}
+	.hd-qlinks {
+		display: block;
+		position: absolute;
+		top: 20px;
+		right: 46px;
+		a {
+			display: block;
+			color: #313444;
+			&:hover {
+				color: #3083fc;
+			}
+			&.link-vip {
+				padding: 20px 5px 0;
+				background: url(icon_vip.png) 50% 0 no-repeat;
+				font-size: 12px;
+				line-height: 27px;
+				&:hover{
+					background: url(icon_vip_hover.png) 50% 0 no-repeat;
+				}
+			}
+		}
+	}
+	.hd-paopao{
+		display: none;
+	}
+}
+
+// 响应式1024适配
+.w1024 #header {
+	.hd-inner2 {
+		width: 980px;
+	}
+}

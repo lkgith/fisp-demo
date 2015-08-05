@@ -1,0 +1,353 @@
+/* nav global */
+#navBlack{
+    position: relative;
+    z-index: 999;
+    background-color: #393d54;
+.navGuider{
+    height:40px;
+    margin:0 auto;
+    background-color: #393d54;
+  .fis-clearfix();
+}
+.nav_main {
+    float: left;
+    height: 40px;
+    li{
+        margin-left: 0;
+        float: left;
+        margin-left: -2px;
+        background-position: 100% -102px;
+        &.first {
+          margin-left: 0;
+        }
+    }
+    a {
+      float: left;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 34px;
+      *line-height: 31px;
+    }
+    a:link, a:visited {
+      color: #FFF;
+    }
+    span {
+      padding: 0 9px;
+      *padding-top: 3px;
+    }
+}
+/* 导航增加 */
+.navGuider .r {
+    float: right;
+    height: 40px;
+    position: relative;
+}
+.search_sug {
+  margin:0 17px 0 0;
+  /* 覆盖sug部分样式 */
+  .bdv-search-mini{
+    width: 212px;
+    _width:220px;
+    height: 27px;
+    position: relative;
+    top: 8px;
+    left: 0;
+    .bdv-search-btns {
+	  border:none;
+      width: 72px;
+      height: 27px;
+      margin-left:0;
+      *position: relative;
+      *top:-1px;
+      *height: 29px;
+    }
+    .bdv-search-btns input {
+      width: 72px;
+      height: 27px;
+      *height: 29px;
+      font-size: 12px;
+      font-family: "Microsoft YaHei","微软雅黑","宋体",Arial,sans-serif;
+      border: 1px solid #d7d7d7;
+       background-color:#F8F8F8;
+      /* Webkit: Safari 4-5, Chrome 1-9 */
+      background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#F8F8F8), to(#eaeaea));
+      /* Webkit: Safari 5.1+, Chrome 10+ */
+      background: -webkit-linear-gradient(top, #F8F8F8,#eaeaea);
+      /* Firefox 3.6+ */
+      background: -moz-linear-gradient(top, #F8F8F8, #eaeaea);
+      /* Opera 11.10+ */
+      background: -o-linear-gradient(top, #F8F8F8, #eaeaea);
+      /* IE 10 */
+      background: -ms-linear-gradient(top, #F8F8F8, #eaeaea);
+      /* IE < 10 */
+      /* 注意：这一行必须写在最后 */
+      FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#F8F8F8, endColorStr=#eaeaea);
+      &:hover{
+        background-color:#fffefe;
+        /* Webkit: Safari 4-5, Chrome 1-9 */
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fffefe), to(#d7d7d7));
+        /* Webkit: Safari 5.1+, Chrome 10+ */
+        background: -webkit-linear-gradient(top, #fffefe,#d7d7d7);
+        /* Firefox 3.6+ */
+        background: -moz-linear-gradient(top, #fffefe, #d7d7d7);
+        /* Opera 11.10+ */
+        background: -o-linear-gradient(top, #fffefe, #d7d7d7);
+        /* IE 10 */
+        background: -ms-linear-gradient(top, #fffefe, #d7d7d7);
+        /* IE < 10 */
+        /* 注意：这一行必须写在最后 */
+        FILTER: progid:DXImageTransform.Microsoft.Gradient(startColorStr=#fffefe, endColorStr=#d7d7d7);
+      }
+    }
+    .bdv-search-inputs {
+      width: 137px;
+      height: 27px;
+      border: none;
+    }
+  }
+}
+
+/* 覆盖播放记录部分样式 */
+.record_see {
+    /* 覆盖播放记录部分样式 */
+    .bdv-record{
+        height:40px;
+        .bdv-record-arrow {
+            top: 35px;
+        }
+    }
+    .bdv-record .bdv-record-toggle {
+        position: relative;
+        color: #FFF;
+        font-family: "Microsoft YaHei","微软雅黑","宋体",Arial,sans-serif;
+        padding-left: 10px;
+        margin-top:0;
+        line-height: 40px;
+        background:none;
+        i{
+            position: absolute;
+            top:18px;
+            right:0;
+            width:0;
+            height: 0;
+            overflow: hidden;
+            border-style: solid;
+            border-width: 4px;
+            border-color: #FFF #393d54 #393d54;
+            -webkit-transform-origin: 50% 25%;
+            -webkit-transition: -webkit-transform .2s ease-in;
+            transform-origin: 50% 25%;
+            transition: trnasform .2s ease-in;
+        }
+    }
+    .bdv-record-show .bdv-record-toggle i {
+         -webkit-transform: rotate(180deg);
+         transform: rotate(180deg);
+    }
+    .bdv-record-main {
+        top: 40px;
+        left: -212px;
+    }
+    .bdv-record-content .bdv-record-ft a {
+        display: inline;
+    }
+    /* 覆盖追剧部分样式 */
+    .bdv-trace {
+        height:40px;
+        a.bdv-trace-toggle{
+            position: relative;
+            color: #fff;
+            font-family: "Microsoft YaHei","微软雅黑","宋体",Arial,sans-serif;
+            margin-top:0;
+            line-height:40px;
+            background:none;
+            i{
+                position: absolute;
+                top:18px;
+                right:0;
+                width:0;
+                height: 0;
+                overflow: hidden;
+                border-style: solid;
+                border-width: 4px;
+                border-color: #FFF #393d54 #393d54;
+                -webkit-transform-origin: 50% 25%;
+                -webkit-transition: -webkit-transform .2s ease-in;
+                transform-origin: 50% 25%;
+                transition: trnasform .2s ease-in;
+            }
+        }
+
+        .bdv-trace-notify {
+            visibility: hidden;
+        }
+
+        .bdv-trace-main {
+            left: -216px;
+            top:40px;
+        }
+
+        .bdv-trace-arrow {
+            left: 222px;
+        }
+    }
+    .bdv-trace-show .bdv-trace-toggle i{
+        -webkit-transform: rotate(180deg);
+         transform: rotate(180deg);      
+    }
+}
+/* 用户信息 */
+.user_info {
+    width: 68px;
+    margin-right: 17px;
+    #userinfo{
+        font-family: "Microsoft YaHei","微软雅黑","宋体",Arial,sans-serif;
+        white-space: nowrap;
+    }
+    p{
+        height:40px;
+        line-height: 40px;
+    }
+}
+#userinfo #username{
+    background: url("icons.png") no-repeat 0 14px;
+}
+/*  */
+.navGuider a, .navGuider a:hover {
+    text-decoration: none;
+}
+.navGuider a span {
+    display: block;
+    _float:left;
+    height:40px;
+}
+
+.nav_main #navMainMenu {
+    height:40px;
+    _width: 555px;
+    a {
+        font-weight: normal;
+        font-size: 14px;
+        font-family: "Microsoft YaHei", "微软雅黑", "宋体", Arial, sans-serif;
+        line-height: 45px;
+    }
+    a:hover {
+        background-color: #3f466d;
+    }
+    a.current, a.current:hover {
+        background-color: #3f466d;
+    }
+
+    span {
+        padding: 0 8px 0 9px;
+    }
+    li.first span, li.first span {
+        padding-right: 8px;
+        padding-left: 9px;
+    }
+    li.logo {
+        position: relative;
+        width:107px;
+        height: 40px;
+        overflow: hidden;
+        a{
+            display: block;
+            width: 87px;
+            height: 27px;
+            position: absolute;
+            left:0;
+            top:50%;
+            margin-top: -14px;
+            text-indent: -9999px;
+            background:url(logo.png) 0 0 no-repeat;
+            _background: 0;
+            _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='logo.png');
+        }
+
+    }
+
+}
+    #navMainMenu{
+        #btn_more {
+            span {
+                padding-right: 22px;
+            }
+        }
+        .btn_more {
+            position:relative;
+            i {
+                position: absolute;
+                top: 20px;
+                right: 9px;
+                height: 0;
+                overflow: hidden;
+                border-style: solid;
+                border-width: 4px;
+                border-color: #FFF #393d54 #393d54;
+                -webkit-transform-origin: 50% 25%;
+                -webkit-transition: -webkit-transform .2s ease-in;
+                transform-origin: 50% 25%;
+                transition: trnasform .2s ease-in;
+                cursor: pointer;
+             }
+            a#btn_more:hover, .btn_more_hover {
+                background-color: #3f466d;
+                i {
+                    border-color: #FFF #3f466d #3f466d;
+                    *top: 15px;
+                    *right: 8px;
+                    *border-width: 5px;
+                    *border-color: #3f466d #3f466d #FFF;
+                    -webkit-transform: rotate(180deg);
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        #box_more {
+            display: none;
+            background-color: #3f466d;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 170px;
+            padding: 9px 4px;
+            z-index:10000;
+            li {
+                margin-left: 0;
+            }
+            a {
+                border-right: 0 none;
+                line-height: 28px;
+                span {
+                    padding: 0 6px;
+                }
+                &:hover{
+                    background:#3f466d;
+                    color:#3083fd;
+                }
+            }
+        }
+    }
+}
+
+#navBlack .nav_main #navMainMenu a{
+	cursor: pointer;
+}
+
+#navBlack .navGuider .nav_main #navMainMenu li.city_name{
+	padding-left:15px;
+	border-left: 2px solid #dcdcdc;
+	height: 23px;
+	line-height: 24px;
+	overflow: hidden;
+	color: #dcdcdc;
+	text-align: center;
+	font-size: 16px;
+	margin-top: 13px;
+	font-family:"\5FAE\8F6F\96C5\9ED1","\5B8B\4F53",Arial,sans-serif;
+}
+
+// 适配窄版
+.w1024 #navBlack .navGuider {
+    width: 984px;
+}

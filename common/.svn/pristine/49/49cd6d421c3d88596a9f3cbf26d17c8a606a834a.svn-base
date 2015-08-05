@@ -1,0 +1,24 @@
+#userinfo {
+    position: relative;
+    height: 36px;
+    font: 12px/20px Arial;
+    color: #ffffff;
+    p {
+        padding: 0;
+        height: 36px;
+        line-height: 36px;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .line {
+        margin: auto 8px;
+    }
+    /* 个人中心 */
+    #username {
+        background: url("http://list.video.baidu.com/pc_static/open/record/icons.gif") no-repeat 0 -228px;
+        padding-left: 19px;
+    }
+}

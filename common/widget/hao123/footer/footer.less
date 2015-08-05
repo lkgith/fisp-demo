@@ -1,0 +1,206 @@
+.hao123 {
+/* 基本颜色 */
+@bgColor: #E9E8EF;
+@borderColor: #E0E0E0;
+@linkColor: #666;
+@linkHover: #333;
+@fontFamily: "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "\5B8B\4F53", Arial, sans-serif;
+	// 增加权重
+	body #footer {
+		background: @bgColor;
+		border-top: 1px solid @borderColor;
+		padding-top: 0;
+	}
+	/* 底部上方链接通用 */
+	.footer-toper {
+		width: 100%;
+		background: @bgColor;
+		.footer-toper-cont {
+			width: 1235px;
+			background: @bgColor;
+			margin: 0 auto;
+			overflow: hidden;			
+		}
+		.hao-logo {
+			float: left;
+			margin: 40px 25px 12px 0;
+			.ft-logo {
+				display: block;
+				width: 203px;
+				height: 68px;
+				background: url("hao123logo.png") 0 0 no-repeat;
+			}
+		}
+		// 链接区域通用处理
+		.links-zone {
+			overflow: hidden;
+			padding: 15px 5px 13px 25px;
+			margin-top: 10px;
+			a {
+				float: left;
+				font-family: "Microsoft YaHei", Arial, sans-serif;
+				font-size: 12px;
+				color: @linkColor;
+				text-decoration: none;
+				*word-break: keep-all;
+				&:hover {
+					color: @linkHover;
+					text-decoration: none;					
+				}
+			}			
+			.ft-title {
+				font-size: 16px;
+				height: 16px;
+				*height: 18px;
+				line-height: 16px;
+				*line-height: 18px;
+				margin-bottom: 14px;
+				color: @linkColor;
+				// 更多链接
+				a {
+					visibility: hidden;
+					position: absolute;
+					margin: 2px 1px 0 20px;
+					i {
+						font-family: "宋体";
+						font-style: normal;
+					}
+				}
+			}
+			// 文字详细列表
+			.ft-ys-links,
+			.ft-ot-links {
+				a {
+					height: 12px;
+					*height: 14px;
+					line-height: 12px;
+					*line-height: 14px;
+					margin: 0 20px 12px 0;
+				}
+			} 
+		}
+		.links-zone-hover {
+			.ft-title {
+				a {
+					visibility: visible;
+				}
+			}
+		}
+		.ys-links {
+			float: left;
+			width: 260px;
+			overflow: hidden;
+			.ft-ys-links {
+				overflow: hidden;
+			}
+		}
+		.other-links {
+			float: left;
+			width: 444px;
+			.ft-ot-links {			
+				width: 444px;
+				overflow: hidden;
+			}
+		}
+		.juzi-logo {
+			float: right;
+			margin: 35px 0 12px 30px;
+			.jz-logo {
+				display: block;
+				width: 146px;
+				height: 70px;
+				background: url("orangelogo.jpg") left top no-repeat;
+				*background: url("http://vs3.bdstatic.com/img/123/m/orangelogo.gif") left top no-repeat;
+				&:hover {
+					background-position: -300px top;
+				}
+			}
+		}
+		.ft-line {
+			width: 1px;
+			height: 108px;
+			overflow: hidden;
+			float: left;
+			background: url("line.gif") left top no-repeat;
+			margin: 15px 0 0 0;
+		}
+		.ft-rest {
+			margin-left: 64px;
+		}
+	}
+	/* 底部通用 */
+	.footer-bottom {
+		width: 100%;
+		background: @bgColor;
+		border-top: 1px solid @borderColor;
+		.footer-bottom-cont {
+			width: 1235px;
+			overflow: hidden;
+			background: @bgColor;
+			margin: 0 auto;
+			padding: 13px 0 50px;
+			color: @linkColor;
+			zoom: 1;			
+			a {
+				color: #666;
+				font: 14px/14px @fontFamily;
+				_line-height: 16px;
+				_height: 16px;
+				text-decoration: none;
+				&:hover {
+					color: @linkHover;
+				}
+			}
+			.links {
+				float: left;
+				overflow: hidden;
+				a {
+					float: left;
+					margin-right: 30px;
+				}
+			}
+			.others {
+				float: right;
+				overflow: hidden;
+				margin-right: -10px;
+				a {
+					float: left;
+					margin-right: 10px;
+					border: 1px solid @borderColor;
+					border-radius: 3px;
+					padding: 5px 10px 5px 0;
+					&:hover {
+						background-position: -291px 50%;
+					}
+				}
+				.link-weibo {
+					padding-left: 30px;
+					background: url('sina.gif') 9px 50% no-repeat;
+				}
+				.link-collect {
+					padding-left: 27px;
+					background: url('fav.gif') 9px 50% no-repeat;
+				}
+				.link-mobile {
+					padding-left: 21px;
+					background: url('mob.gif') 9px 50% no-repeat;
+				}
+			}
+		}
+	}
+}
+// 响应式1024适配
+.w1024 .footer,
+.w1024 .footer-bottom .footer-bottom-cont,
+.w1024old .footer,
+.w1024 .footer-toper .footer-toper-cont {
+	width: 1000px;
+}
+.w1024 .footer-toper .footer-toper-cont {
+	.ft-rest {
+		margin-left: 15px;
+	}
+	.other-links  {
+		width: 258px;
+	}
+}

@@ -1,0 +1,307 @@
+.hao123{
+	#topbar {
+		min-width: 1235px;
+		background: #FFF;
+		font: 12px/27px "宋体", Arial, sans-serif;
+		_line-height: 25px;
+		a {
+			color: #666;
+		}
+		.inner {
+			position: relative;
+			z-index: 101;
+			width: 1235px;
+			height: 27px;
+			line-height: 28px;
+			margin: 0 auto;
+		}
+
+		// 主菜单
+		.menumain {
+			float: left;
+			width: 80px;
+			height: 100%;
+			overflow: hidden;
+			a {
+				float: left;
+				color: #8e9999;
+				&.first {
+					padding: 0 0 0 3px;
+				}
+				&:hover {
+					color: #0aa770;
+				}
+			}
+		}
+
+		// 子菜单
+		.menusub {
+			float: left;
+			width: 70px;	
+			padding: 0 8px 0 10px;
+			position: relative;
+			.label {
+				display: block;
+				position: relative;
+				padding-left: 15px;
+				background: url('map.gif') 0 6px no-repeat;
+				*background-position: 0 7px;
+				z-index: 2;
+				color: #8e9999;
+				font: 12px/28px "宋体", Arial, sans-serif;
+				cursor: default;
+				i {
+					position: absolute;
+					top: 13px;
+					*top: 4px;
+					right: 0;
+					_right: 2px;
+					height: 0;
+					overflow: hidden;
+					border-style: solid;
+					border-width: 3px;
+					border-color: #666 #FFF #FFF;
+				}
+			}
+			.bd {
+				display: none;
+				position: absolute;
+				top: 27px;
+				left: 0;
+				width: 310px;
+				background: #f0f0f0;
+				-webkit-box-shadow: 0px 2px 2px #f0f0f0;
+				-moz-box-shadow: 0px 2px 2px #f0f0f0;
+				box-shadow: 0px 2px 2px #f0f0f0;
+				*border-bottom: 2px solid #d1cfd0;
+				filter: alpha(opacity=95);
+				opacity: 0.95;
+				.area {
+					overflow: hidden;
+					padding: 17px 0 10px 18px;
+					zoom: 1;
+					h3 {
+						font-size: 14px;
+						font-weight: bold;					
+						color: #666;
+						line-height: 21px;
+					}
+					a {
+						float: left;
+						margin: 0 12px 0 0;
+						line-height: 24px;
+					
+						*word-break:keep-all;
+						&:hover {
+							color: #ee3636;
+							text-decoration: underline;
+						}
+						&.high {
+							color: #ee3636;
+						}
+					}
+				}
+				.area-odd {
+					background: #f0f0f0;
+				}
+				.area-even {			
+					background: #fcfcfc;
+				}
+			}
+		}
+		.menusub-hover {	
+			background-color: #f0f0f0;
+			.label {
+				i {				
+					border-color: #666 #f0f0f0 #f0f0f0;
+				}
+			}
+			.bd {
+				display: block;
+			}
+		}
+
+		// 右侧链接
+		.quicklinks {
+			float: right;
+			a:hover, a.high {
+				color: #0aa770;
+			}
+			a:hover {
+				text-decoration: underline;
+			}
+			a.browse {
+				position: relative;
+				bottom: 6px;
+				_bottom: 0px;
+				right: 10px;
+			}
+			i {
+				display: inline-block;
+				width: 1px;
+				height: 14px;
+				overflow: hidden;
+				margin: 0 8px 2px;
+				vertical-align: middle;
+			}
+			// 改版使用icon
+			.feedback, .mobile, #sethome {
+				background: url('h_topbar_icon.png') 7px 8px no-repeat;
+				width: 30px;
+				height: 27px;
+				_height: 22px;
+				display: inline-block;
+			}
+			.feedback {
+				background-position: 7px -92px;
+				&:hover {				
+				    background-position: -128px -92px;
+				}
+			}
+			#sethome {
+				&:hover {				
+				    background-position: -128px 8px;
+				}
+			}
+			.mobile {		
+				background-position: 8px -191px;
+				position: relative;
+				margin-right: 16px;				
+				&:hover {				
+				    background-position: -127px -191px;
+				}
+			}
+		}
+		// 用户信息
+		.userbar {
+			float: right;
+			position: relative;
+		    background: #e6e6e6;
+			height: 27px;
+			_height: 22px;
+			margin-right: 10px;
+			a.link-login, a.link-login:visited {
+				color: #8e9999;
+				border-top: 0 none; 
+				border-bottom: 0 none;
+				display: inline-block;
+				width: 50px;
+				height: 27px;
+				_height: 28px;
+				overflow: hidden;
+				line-height: 27px;
+				padding: 0 10px;
+				text-indent: 22px;
+				_text-indent: 0px;
+				_padding-left: 30px;
+				_width: 30px;
+				*float: left;
+				text-decoration: none;
+				background: url('h_du.gif') 11px 6px no-repeat;
+				&:hover {
+					color: #747d7d;
+					background-position: -149px 6px;
+				}
+			}
+		}
+        .userbar {			
+			.link-user {
+				width: 95px;
+				padding: 0 10px;
+				text-indent: 18px;
+				color: #8e9999;
+				border-top: 0 none; 
+				border-bottom: 0 none;
+				display: inline-block;
+				height: 27px;
+				_height: 28px;
+				overflow: hidden;
+				line-height: 27px;
+				text-decoration: none;
+				background: url('h_du.gif') 10px 6px no-repeat;
+				
+				i {
+					position: absolute;
+					top: 13px;
+					right: 10px;
+					height: 0;
+					overflow: hidden;
+					border-style: solid;
+					border-width: 3px;
+					border-color: #8e9999 #e6e6e6 #e6e6e6;
+				}
+				span {
+					display: inline-block;
+					font-family: "Arial";
+					width: 68px;
+					height: 100%;
+					text-indent: 0;
+					white-space: nowrap;
+					overflow: hidden;
+					-o-text-overflow: ellipsis;
+					text-overflow: ellipsis;
+				}
+			}
+			.link-bd {
+				display: none;
+				width: 100%;
+				background-color: #f0f0f0;
+				-webkit-box-shadow: 0px 2px 2px #f0f0f0;
+				-moz-box-shadow: 0px 2px 2px #f0f0f0;
+				box-shadow: 0px 2px 2px #f0f0f0;
+				*border-bottom: 2px solid #d1cfd0;
+				position: absolute;
+				top: 28px;
+				left: 0;
+				.link-uc, .link-qt {
+					height: 30px;
+					line-height: 30px;
+					padding-left: 30px;
+					width: 85px;
+					display: inline-block;
+					&:hover {
+						text-decoration: underline;
+					}
+				}
+				.link-uc {
+					background: url('h_ys_icon.gif') #0aa770 10px 7px no-repeat;
+					color: #fff;
+				}
+				.link-qt {
+					color: #8e9999;
+				}
+			}
+		}
+		.userbar.userbar-login {
+			width: 70px;
+		}
+		.userbar.userbar-logged {
+			width: 115px;
+			.link-user {
+				span {
+					text-indent: 20px;
+					float: left;
+					width: 85px;
+				}
+			}
+		}
+		.userbar.userbar-hover {
+			.link-bd {
+				display: block;
+			}
+		}		
+	}
+}
+
+// 响应式1024适配
+.hao123.w1024 #topbar {
+	min-width: 1000px;
+	.inner {
+		width: 1000px;
+	}
+}
+.w1024old #topbar {
+	.inner {
+		width: 984px;
+	}
+}

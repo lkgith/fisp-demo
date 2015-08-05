@@ -1,0 +1,958 @@
+/**
+ * @fileoverview 重置元素
+ * @author hongshun
+ * @vision 1.0.0
+ */
+
+/**
+ * .fis-reset-box
+ * @description 将容器边距边框都设置为0
+ */
+.fis-reset-box() {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/**
+ * @fileoverview hacks针对不同的浏览器去写不同的CSS，让它能够同时兼容不同的浏览器
+ * @author hongshun
+ * @vision 1.0.0
+ */
+
+/**
+ * .fis-ie6-hack
+ * @description IE6 hack
+ * @param @property 属性名称
+ * @param @value 其他浏览器属性值
+ * @param @ie6Value ie6属性值
+ */
+.fis-ie6-hack(@property, @value, @ie6Value) {
+  @property: @value !important;
+  @property: @ie6Value;
+}
+
+/**
+ * .fis-has-layout
+ * @description 为IE元素添加hasLayout
+ */
+.fis-has-layout() {
+  *zoom: 1;
+}
+
+/**
+ * @fileoverview float浮动(解决IE5/IE6双margin问题)
+ * @author hongshun
+ * @vision 1.0.0
+ */
+
+/**
+ * .fis-float
+ * @description 浮动(解决IE5/IE6双margin问题)
+ * @param [@side=left] 浮动方向
+ */
+.fis-float(@side: left) {
+  display: inline;
+  float: @side;
+}
+
+/**
+ * .fis-float-left
+ * @description 左浮动
+ */
+.fis-float-left() {
+  .fis-float(left);
+}
+
+/**
+ * .fis-float-right
+ * @description 右浮动
+ */
+.fis-float-right() {
+  .fis-float(right);
+}
+
+/**
+ * @fileoverview 清除浮动
+ * @author hongshun guizi
+ * @vision 1.0.0
+ */
+
+/**
+ * .fis-clearfix
+ * @description 清除浮动(不需要添加额外标签)
+ */
+.fis-clearfix() {
+  .fis-has-layout();
+
+  &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+  }
+}
+
+/**
+ * .fis-clear
+ * @description 清除浮动(需要添加空标签)
+ */
+.fis-clear() {
+  clear: both;
+}
+
+/**
+ * @fileoverview CSS3相关
+ * @author hongshun guizi
+ * @vision 1.0.0
+ */
+
+/**
+ * .fis-opacity
+ * @description 透明度(support IE6+、Firefox 3.5+、Safari、Chrome、Opera)
+ * @param [@opacity=100] 透明度值
+ */
+.fis-opacity(@opacity: 100) {
+  filter: alpha(opacity= @opacity);
+  -khtml-opacity: @opacity / 100;
+  -moz-opacity: @opacity / 100;
+  opacity: @opacity / 100;
+}
+
+/**
+ * .fis-content-columns
+ * @description 设置多列布局的列宽和列数属性(support IE10+、Firefox 3.5+、Safari、Chrome、Opera)
+ * @param @columnCount 列数
+ * @param [@columnGap=20px] 列间隔
+ */
+.fis-content-columns(@columnCount, @columnGap: 20px) {
+  -webkit-column-count: @columnCount;
+  -moz-column-count: @columnCount;
+  column-count: @columnCount;
+  -webkit-column-gap: @columnGap;
+  -moz-column-gap: @columnGap;
+  column-gap: @columnGap;
+}
+
+/**
+ * .fis-background-clip
+ * @description 背景的裁剪区域(support IE9+、Firefox 3.5+、Safari、Chrome、Opera)
+ * @param @clip 裁剪位置(border-box | padding-box | content-box | no-clip)
+ */
+.fis-background-clip(@clip) {
+  -webkit-background-clip: @clip;
+  -moz-background-clip: @clip;
+  background-clip: @clip;
+}
+
+/**
+ * .fis-background-origin
+ * @description 背景图片的位置定位(support IE9+、Firefox 3.5+、Safari、Chrome、Opera)
+ * @param @origin 定位位置(border-box | padding-box | content-box)
+ */
+.fis-background-origin(@origin) {
+  -webkit-background-origin: @origin;
+  -moz-background-origin: @origin;
+  background-origin: @origin;
+}
+
+/**
+ * .fis-gradient-horizontal
+ * @description 背景水平渐变(support IE8+、Firefox 3.5+、Safari、Chrome、Opera)
+ * @param [@startColor=#555] 颜色渐变初始值
+ * @param [@endColor=#333] 颜色渐变终值
+ */
+.fis-gradient-horizontal (@startColor: #555, @endColor: #333) {
+  background-color: @endColor;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(left, @startColor, @endColor);
+  background-image: -ms-linear-gradient(left, @startColor, @endColor);
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0%, @startColor), color-stop(100%, @endColor));
+  background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+  background-image: -o-linear-gradient(left, @startColor, @endColor);
+  background-image: linear-gradient(left, @startColor, @endColor);
+}
+
+/**
+ * .fis-gradient-vertical
+ * @description 背景垂直渐变(support IE8+、Firefox 3.5+、Safari、Chrome、Opera)
+ * @param [@startColor=#555] 颜色渐变初始值
+ * @param [@endColor=#333] 颜色渐变终值
+ */
+.fis-gradient-vertical (@startColor: #555, @endColor: #333) {
+  background-color: @endColor;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, @startColor, @endColor);
+  background-image: -ms-linear-gradient(top, @startColor, @endColor);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, @startColor), color-stop(100%, @endColor));
+  background-image: -webkit-linear-gradient(top, @startColor, @endColor);
+  background-image: -o-linear-gradient(top, @startColor, @endColor);
+  background-image: linear-gradient(top, @startColor, @endColor);
+}
+
+/**
+ * .fis-gradient-directional
+ * @description 背景方向渐变(support Firefox 3.5+、Safari、Chrome、Opera)
+ * @param [@startColor=#555] 颜色渐变初始值
+ * @param [@endColor=#333] 颜色渐变终值
+ * @param [@deg=45deg] 渐变方向
+ */
+.fis-gradient-directional (@startColor: #555, @endColor: #333, @deg: 45deg) {
+  background-color: @endColor;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(@deg, @startColor, @endColor);
+  background-image: -ms-linear-gradient(@deg, @startColor, @endColor);
+  background-image: -webkit-linear-gradient(@deg, @startColor, @endColor);
+  background-image: -o-linear-gradient(@deg, @startColor, @endColor);
+  background-image: linear-gradient(@deg, @startColor, @endColor);
+}
+
+/**
+ * .fis-gradient-vertical-three-colors
+ * @description 背景三色垂直渐变(support IE8+、Firefox 3.5+、Safari、Chrome、Opera)
+ * @param [@startColor=#00b3ee] 颜色渐变初始值
+ * @param [@midColor=#7a43b6] 颜色渐变中值
+ * @param [@colorStop=50%] 颜色中值渐变位置
+ * @param [@endColor=#333] 颜色渐变终值
+ */
+.fis-gradient-vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+  background-color: @endColor;
+  background-repeat: no-repeat;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+  background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+  background-image: -moz-linear-gradient(top, @startColor, @midColor @colorStop, @endColor);
+  background-image: -ms-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+  background-image: -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+  background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
+}
+
+/**
+ * .fis-inline-block
+ * @description inline-block展示(兼容inline和block元素)
+ */
+.fis-inline-block() {
+  display: -moz-inline-box;
+  -moz-box-orient: vertical;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+/**
+ * .fis-min-height
+ * @description 最小高度
+ * @param [@value] 最小高度值
+ */
+.fis-min-height(@value) {
+  min-height: @value;
+  height: auto !important;
+  height: @value;
+}
+
+/**
+ * .fis-min-width
+ * @description 最小宽度
+ * @param [@value] 最小宽度值
+ */
+.fis-min-width(@value) {
+  min-width: @value;
+  width: auto !important;
+  width: @value;
+}
+
+/**
+ * .fis-border-radius
+ * @description 圆角(support IE9+、Firefox 3.5+、Safari、Chrome、Opera)
+ * @param [@radius=5px] 圆角半径
+ */
+.fis-border-radius(@radius: 5px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+}
+
+/**
+ * .fis-box-shadow
+ * @description 阴影(support Firefox 3.5+、Safari、Chrome、Opera)
+ * @param @shadow 阴影参数(水平偏移值 | 垂直偏移值 | 阴影模糊值 | 阴影颜色)
+ */
+.fis-box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+  -moz-box-shadow: @shadow;
+  box-shadow: @shadow;
+}
+
+/**
+ * .fis-transition
+ * @description 过渡变换
+ * @param @transition 变换参数
+ */
+.fis-transition(@transition) {
+  -webkit-transition: @transition;
+  -moz-transition: @transition;
+  -ms-transition: @transition;
+  -o-transition: @transition;
+  transition: @transition;
+}
+
+/**
+ * @fileoverview 各种链接样式定制
+ * @author hongshun guizi
+ * @vision 1.0.0
+ */
+
+/**
+ * .fis-hover-link
+ * @description 默认链接无下划线，悬浮出现下划线
+ */
+.fis-hover-link() {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/**
+ * .fis-link-bg
+ * @description 链接悬浮背景变色
+ * @param @bgColor 悬浮链接背景色
+ */
+.fis-link-bg(@bgColor) {
+  text-decoration: none;
+  .fis-inline-block();
+  &:hover {
+    text-decoration: none;
+    background: @bgColor;
+  }
+}
+
+/**
+ * .fis-link-colors
+ * @description 链接颜色样式设置
+ * @param @normal 默认链接颜色
+ * @param @hover 鼠标悬浮时链接颜色
+ * @param @active 点击时链接颜色
+ * @param @visited 访问过的链接颜色
+ * @param @focus tab键获取焦点时链接颜色
+ */
+.fis-link-colors(@normal, @hover, @active, @visited, @focus) {
+  color: @normal;
+  &:visited {
+    color: @visited;
+  }
+  &:link {
+    color: @focus;
+  }
+  &:hover {
+    color: @hover;
+  }
+  &:active {
+    color: @active;
+  }
+}
+
+/**
+ * .fis-unstyled-link
+ * @description 继承父元素的链接样式(不兼容IE6/7)
+ */
+.fis-unstyled-link() {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+/**
+ * @fileoverview 各种列表样式定制
+ * @author hongshun guizi
+ * @vision 1.0.0
+ */
+
+/**
+ * .fis-no-bullet
+ * @description 清除列表样式(针对li标签)
+ */
+.fis-no-bullet() {
+  list-style-image: none;
+  list-style-type: none;
+}
+
+/**
+ * .fis-no-bullets
+ * @description 清除列表样式(针对ul、ol标签)
+ */
+.fis-no-bullets() {
+  list-style: none;
+  li {
+    .fis-no-bullet();
+  }
+}
+
+/**
+ * .fis-horizontal-list
+ * @description 水平列表
+ * @param [@padding=5px] 列表内左右边距
+ */
+.fis-horizontal-list(@padding: 5px) {
+  .fis-reset-box();
+  .fis-clearfix();
+
+  li {
+    .fis-no-bullet();
+    white-space: nowrap;
+    .fis-float-left();
+    padding-left: @padding;
+    padding-right: @padding;
+  }
+
+  &:first-child, .first {
+    padding-left: 0;
+  }
+  &:last-child, .last {
+    padding-right: 0;
+  }
+}
+
+/**
+ * .fis-tab-list
+ * @description 水平tab列表
+ * @param [@padding=5px] tab标签左右边距
+ * @param [@borderWidth=1px] tab边框宽度
+ * @param [@borderColor=#000] tab边框颜色
+ * @param [@bgColor=#fff] 选中tab背景色
+ */
+.fis-tab-list(@padding: 5px, @borderWidth: 1px, @borderColor: #000, @bgColor: #fff) {
+  .fis-clearfix();
+  border-bottom: @borderWidth solid @borderColor;
+  position: relative;
+
+  li {
+    .fis-no-bullet();
+    .fis-float-left();
+    position: relative;
+    bottom: -@borderWidth;
+    margin-left: -@borderWidth;
+    padding-left: @padding;
+    padding-right: @padding;
+    border: @borderWidth solid @borderColor;
+  }
+
+  .current {
+    border-bottom-color: @bgColor;
+    background-color: @bgColor;
+  }
+
+  &:first-child, .first {
+    margin-left: 0;
+  }
+}
+
+/**
+ * .fis-inline-block-list
+ * @description inline-block列表
+ * @param [@padding=4px] 列表内左右边距
+ */
+.fis-inline-block-list(@padding: 4px) {
+  .fis-reset-box();
+  .fis-clearfix();
+
+  li {
+    .fis-no-bullet();
+    .fis-inline-block();
+    white-space: nowrap;
+    padding-left: @padding;
+    padding-right: @padding;
+  }
+}
+
+/**
+ * .fis-inline-list
+ * @description inline列表
+ */
+.fis-inline-list() {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: inline;
+
+  li {
+    margin: 0px;
+    padding: 0px;
+    display: inline;
+  }
+}
+
+/**
+ * @fileoverview 各种表格样式定制
+ * @author hongshun guizi
+ * @vision 1.0.0
+ */
+
+/**
+ * .fis-alternating-rows-and-columns
+ * @description 表格条纹样式
+ * @param @evenColor 偶数行背景颜色
+ * @param @oddColor 奇数行背景颜色
+ * @param [@headerColor=white] 表头背景颜色
+ * @param [@footerColor=white] 表格底部背景颜色
+ */
+.fis-alternating-rows-and-columns(@evenColor, @oddColor, @headerColor: white, @footerColor: white) {
+  tr.odd td {
+    background-color: @oddColor;
+  }
+  tr:nth-child(2n+1) {
+    background-color: @oddColor;
+  }
+  tr.even td {
+    background-color: @evenColor;
+  }
+  tr:nth-child(2n) {
+    background-color: @evenColor;
+  }
+  th {
+    background-color: @headerColor;
+  }
+  tfoot td {
+    background-color: @footerColor;
+  }
+}
+
+/**
+ * .fis-outer-table-borders
+ * @description 表格外边框
+ * @param [@width=2px] 宽度
+ * @param [@color=black] 颜色
+ */
+.fis-outer-table-borders(@width: 2px, @color: black) {
+  border: @width solid @color;
+  thead {
+    th {
+      border-bottom: @width solid @color;
+    }
+  }
+  tfoot {
+    th, td {
+      border-top: @width solid @color;
+    }
+  }
+}
+
+/**
+ * .fis-inner-table-borders
+ * @description 表格内边框
+ * @param [@width=2px] 宽度
+ * @param [@color=black] 颜色
+ */
+.fis-inner-table-borders(@width: 2px, @color: black) {
+  tbody {
+    th, td {
+      border-right: @width solid @color;
+      border-bottom: @width solid @color;
+      border-left-width: 0px;
+      border-top-width: 0px;
+    }
+  }
+}
+
+/**
+ * @fileoverview 各种文本样式定制
+ * @author hongshun
+ * @vision 1.0.0
+ */
+
+/**
+ * .fis-nowrap
+ * @description 文本不折行
+ */
+.fis-nowrap() {
+  white-space: nowrap;
+}
+
+/**
+ * .fis-wrap
+ * @description 文本折行
+ */
+.fis-wrap() {
+  white-space: pre; /* CSS 2.0 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3.0 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  white-space: -moz-pre-wrap; /* Mozilla */
+  white-space: -hp-pre-wrap; /* HP Printers */
+  word-wrap: break-word; /* IE 5+ */
+}
+
+/**
+ * @fileoverview 各种定制布局样式
+ * @author hongshun guizi
+ * @vision 1.0.0
+ */
+
+/**
+ * .fis-container
+ * @description 设置容器
+ * @param [@columns=24] 列数
+ * @param [@gridWidth=30px] 列宽
+ * @param [@gridMargin=10px] 右边距
+ */
+.fis-container(@columns: 24, @gridWidth:30px, @gridMargin: 10px) {
+  width: (@gridWidth + @gridMargin) * @columns - @gridMargin;
+  margin: 0 auto;
+  .fis-clearfix();
+}
+
+/**
+ * .fis-column
+ * @description 设置列(左浮动)
+ * @param [@n=1] 占用的列数
+ * @param [@gridWidth=30px] 列宽
+ * @param [@gridMargin=10px] 右边距
+ */
+.fis-column(@n: 1, @gridWidth:30px, @gridMargin: 10px) {
+  .fis-float-left();
+  margin-right: @gridMargin;
+  width: @gridWidth * @n + @gridMargin * (@n - 1);
+}
+
+/**
+ * .fis-column-ext
+ * @description 设置列(右浮动)
+ * @param [@n=1] 占用的列数
+ * @param [@gridWidth=30px] 列宽
+ * @param [@gridMargin=10px] 右边距
+ */
+.fis-column-ext(@n: 1, @gridWidth:30px, @gridMargin: 10px) {
+  .fis-float-right();
+  margin-right: @gridMargin;
+  width: @gridWidth * @n + @gridMargin * (@n - 1);
+}
+
+/**
+ * .fis-last
+ * @description 设置列为最后一列
+ */
+.fis-last() {
+  margin-right: 0;
+}
+
+/**
+ * .fis-prepend
+ * @description 在左侧插入空白
+ * @param [@n=1] 占用的列数
+ * @param [@gridWidth=30px] 列宽
+ * @param [@gridMargin=10px] 右边距
+ */
+.fis-prepend(@n: 1, @gridWidth:30px, @gridMargin: 10px) {
+  padding-left: (@gridWidth + @gridMargin) * @n;
+}
+
+/**
+ * .fis-append
+ * @description 在右侧插入空白
+ * @param [@n=1] 占用的列数
+ * @param [@gridWidth=30px] 列宽
+ * @param [@gridMargin=10px] 右边距
+ */
+.fis-append(@n: 1, @gridWidth:30px, @gridMargin: 10px) {
+  padding-right: (@gridWidth + @gridMargin) * @n;
+}
+
+/**
+ * .fis-offset-left
+ * @description 容器左margin
+ * @param [@n=2] 占用的列数
+ * @param [@gridWidth=10px] 列宽
+ * @param [@gridMargin=0] 右边距
+ */
+.fis-offset-left(@n: 2, @gridWidth: 10px, @gridMargin: 0) {
+  margin-left: (@gridWidth + @gridMargin) * @n;
+}
+
+/**
+ * .fis-offset-right
+ * @description 容器右margin
+ * @param [@n=2] 占用的列数
+ * @param [@gridWidth=10px] 列宽
+ * @param [@gridMargin=0] 右边距
+ */
+.fis-offset-right(@n: 2, @gridWidth: 10px, @gridMargin: 0) {
+  margin-right: (@gridWidth + @gridMargin) * @n;
+}
+
+/**
+ * .fis-grid-percent
+ * @description 百分比容器宽度
+ * @param [@n=2] 分子
+ * @param [@all=5] 分母
+ */
+.fis-grid-percent(@n: 2, @all: 5) {
+  width: percentage(@n / @all);
+}
+
+/**
+ * @fileoverview 各种定制布局样式
+ * @author hongshun guizi
+ * @vision 1.0.0
+ */
+
+/**
+ * .fis-center-block
+ * @description 容器居中
+ */
+.fis-center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/**
+ * .fis-fixed-container
+ * @description 居中布局（清除浮动）
+ */
+.fis-fixed-container() {
+  .fis-center-block();
+  .fis-clearfix();
+}
+
+/**
+ * .fis-fixed-container
+ * @description 流动布局（边栏左浮动）
+ * @param [@minWidth=940px] 最小容器宽度
+ * @param [@sidebarWidth=220px] 边栏宽度
+ * @param [@padding=20px] 容器边距
+ */
+.fis-fluid-container(@minWidth: 940px, @sidebarWidth: 220px, @padding: 20px) {
+  position: relative;
+  min-width: @minWidth;
+  padding-left: @padding;
+  padding-right: @padding;
+  .fis-clearfix();
+
+  .sidebar {
+    .fis-float-left();
+    width: @sidebarWidth;
+  }
+
+  .content {
+    margin-left: @sidebarWidth + @padding;
+  }
+}
+
+/**
+ * .fis-layout-fluid
+ * @description 流动布局（边栏可定制浮动方式）
+ * @param [@minWidth=940px] 最小容器宽度
+ * @param [@sidebarWidth=220px] 边栏宽度
+ * @param [@sidebarFloat=left] 定栏浮动方式，默认左浮动
+ */
+.fis-layout-fluid(@minWidth: 940px, @sidebarWidth: 220px, @sidebarFloat: left) {
+  min-width: @minWidth;
+  .fis-clearfix();
+  .sidebar {
+    .fis-float(@sidebarFloat);
+    width: @sidebarWidth;
+  }
+}
+
+/**
+ * .fis-vertical-single
+ * @description 单行文字垂直居中
+ * @param height 文字行高
+ */
+.fis-vertical-single(@height: 24px) {
+  line-height: @height;
+  height: @height;
+  display: inline-block;
+}
+
+/**
+ * .fis-vertical-fixed
+ * @description 定高容器文字/图片垂直居中
+ * @param [@height=100px] 容器高度
+ */
+.fis-vertical-fixed(@height: 100px) {
+  display: table;
+  height: @height;
+  *position: relative;
+  .inner {
+    display: table-cell;
+    vertical-align: middle;
+    *position: absolute;
+    *top: 50%;
+    .content {
+      *position: relative;
+      *top: -50%;
+    }
+  }
+}
+
+/**
+ * .fis-vertical-adapted
+ * @description 自适应容器文字垂直居中
+ * @param [@padding=20px] 文字与容器上下间距
+ */
+.fis-vertical-adapted(@padding: 20px) {
+  padding-top: @padding;
+  padding-bottom: @padding;
+}
+
+/**
+ * @fileoverview 各种字体样式定制
+ * @author hongshun
+ * @vision 1.0.0
+ */
+
+@fisFontFamily: "Helvetica Neue", Arial, Helvetica, sans-serif;
+@fisFixedFontFamily: "andale mono", "lucida console", monospace;
+
+/**
+ * .fis-normal-text
+ * @description 标准字体
+ * @param [@color=#222] 字体颜色
+ */
+.fis-normal-text(@color: #222) {
+  font-family: @fisFontFamily;
+  color: @color;
+}
+
+/**
+ * .fis-fixed-width-text
+ * @description 固定高宽字体
+ */
+.fis-fixed-width-text() {
+  font: 1em @fisFixedFontFamily;
+  line-height: 1.5;
+}
+
+/**
+ * .fis-header-text
+ * @description 标题字体
+ * @param [@color=#111] 字体颜色
+ */
+.fis-header-text(@color: #111) {
+  font-weight: normal;
+  color: @color;
+}
+
+/**
+ * .fis-quiet-color
+ * @description 暗色调颜色
+ * @param [@color=#666] 颜色
+ */
+.fis-quiet-color(@color: #666) {
+  color: @color;
+}
+
+/**
+ * .fis-loud-color
+ * @description 亮色调颜色
+ * @param [@color=#000] 颜色
+ */
+.fis-loud-color(@color: #000) {
+  color: @color;
+}
+
+/**
+ * @fileoverview 按钮组件
+ * @author guizi
+ * @vision 1.0.0
+ */
+
+/**
+ * .fis-button-slide
+ * @description 背景渐变滑动门按钮
+ * @param [@height=32px] 按钮高度
+ * @param [@padding=20px] 按钮文字两边内边距
+ */
+.fis-button-slide(@height:32px, @padding:20px) {
+  border: 0;
+  cursor: pointer;
+  background-repeat: repeat-x;
+  text-decoration: none;
+  .fis-vertical-single(@height);
+  em, b {
+    .fis-vertical-single(@height);
+    text-align: center;
+    font-weight: normal;
+    font-style: normal;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+  b {
+    background-position: right 0;
+    padding: 0 @padding;
+  }
+  &:hover, &:active {
+    text-decoration: none;
+    background-repeat: repeat-x;
+    em, b {
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+/**
+ * @fileoverview 边框组件
+ * @author guizi
+ * @vision 1.0.0
+ */
+
+/**
+ * .fis-mod-round
+ * @description 圆角边框
+ * @params [@roundSize=3px] 圆角半径
+ */
+.fis-mod-round(@roundSize: 3px) {
+  .fis-clearfix();
+  .top, .bottom {
+    font-weight: normal;
+    font-size: 1%; /* 去除ie6下空标签的默认高度 */
+  }
+  .tl, .tr, .bl, .br {
+    .fis-float-left();
+    background-repeat: no-repeat;
+    width: @roundSize;
+    height: @roundSize;
+  }
+  .tr, .br {
+    .fis-float-right();
+  }
+  .bl, .br {
+    margin-top: -@roundSize;
+  }
+}
+
+/**
+ * @fileoverview 图标组件
+ * @author guizi
+ * @vision 1.0.0
+ */
+
+/**
+ * .fis-icon
+ * @description 长宽相等的图标
+ * @params [@size=16px] icon的长宽
+ */
+.fis-icon(@size: 16px) {
+  padding-left: @size;
+  height: @size;
+  .fis-inline-block();
+  vertical-align: text-bottom;
+  background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+

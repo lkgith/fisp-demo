@@ -1,0 +1,59 @@
+#nav {
+	background: #393755;
+	.nav-inner {
+		width: 1235px;
+		height: 42px;
+		margin: 0 auto;
+		background: #393755;
+	}
+	.w984{
+		width:984px;
+	}
+	li {
+		float: left;
+		a {
+			position: relative;
+			float: left;
+			color: #FFF;
+			line-height: 42px;
+			text-decoration: none;
+			img{
+				position: absolute;
+				max-width:none;
+				_display:none;
+				z-index: 999
+			}
+
+			&:hover {
+				background: #474A70;
+			}
+		}
+		&.current {
+			a {
+				background: #3083FD;
+			}
+		}
+	}
+	.menu-main {
+		float: left;
+		a {
+			padding: 0 8px;
+			font-size: 14px;
+		}
+	}
+	.menu-sub {
+		float: right;
+		a {
+			padding: 0 4px;
+			font-size: 12px;
+		}
+	}
+}
+
+// 响应式1024适配
+.w1024 #nav {
+	.nav-inner {
+		width: 995px;
+		padding:0 15px 0 10px ;
+	}
+}

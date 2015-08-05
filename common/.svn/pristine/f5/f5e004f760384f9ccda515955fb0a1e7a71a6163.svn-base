@@ -1,0 +1,87 @@
+@iconsBg:"/browse_static/widget/common/backtop/icons_03b77078.png";
+.back-to-top {
+    position:fixed;
+    _position:absolute;
+    bottom:320px;
+    left:50%;
+	width:38px;
+    margin-left:627px;
+    z-index:100;
+    li {
+        background-image:none;
+        position:relative;
+    }
+    a {
+        border:0 none;
+        display:block;
+        color:#fff;
+        cursor:pointer;
+        outline:none;
+        text-decoration:none;
+        text-indent:0;
+        _zoom:1;
+
+        &:hover {
+            outline:none;
+            text-decoration:none;
+        }
+    }
+    .bt-btn-top {
+		width:38px;
+        height:38px;
+		background-image:url(backtop.png?__sprite);
+		_background: 0;
+		_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='backtop.png?__sprite');
+		background-color:#bababa;
+
+        &:hover {
+            background-color:#3083fd;
+        }
+    }
+    .bt-btn-feedback {
+		width:38px;
+        height:38px;
+        background:#bababa url(feedback.png?__sprite) 0 0 no-repeat;
+		_background: 0;
+		_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='feedback.png?__sprite');
+		background-color:#bababa;
+		color:#fff;
+		font:14px/38px "微软雅黑";
+		text-indent:-9999px;
+		text-align:center;
+        &:hover {
+            background-color:#3083fd;
+			background-image:none;
+			text-indent:0;_text-index:-9999px;
+        }
+    }
+    .bt-top {
+        height:38px;
+        display:none;
+    }
+    .bt-bottom {
+		height:38px;
+        margin-top:5px;
+	}
+	/***窄屏适应**/
+	&.narrow-back-top{
+		right:0;
+		left:auto;
+		margin-left:0;
+		.bt-btn-top{
+			position:absolute;
+			top:0;
+			right:0;
+		}	
+		.bt-btn-feedback{
+			position:absolute;
+			top:0;
+			right:0;
+		}
+	}
+}
+.back-to-top-show {
+    .bt-top {
+        display:block;
+    }
+}

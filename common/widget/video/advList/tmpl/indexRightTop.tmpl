@@ -1,0 +1,20 @@
+<% /********************************************
+ *
+ * 文件注释，说明文件名称和文件所包含内容
+ * @file indexRightTop.tmpl
+ * @author shangwenhe
+ * @create time 2015年06月03日10:51
+ * @version {版本信息}  v0.0.1
+ *
+*********************************************/ %>
+<%
+    var item = data &&  data[0] || [];
+    if( data && data.length >1 ){
+        item = data[Math.floor(Math.random() * data.length)];
+    }
+%>
+<% if(item && item.hot_day == 1){ %>
+<a href="<%=item.url%>" target="_blank" static="stp=toplist_140_70" title="<%-item.title%>">
+    <img src="<%=item.imgh_url%>" alt="<%-item.title%>">
+</a>
+<% } %>

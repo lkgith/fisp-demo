@@ -1,0 +1,213 @@
+.navWrap {
+	background: #313444;
+	margin-bottom: 20px;
+}
+.navContent {
+	background: #313444; 
+	height: 40px;
+}
+.navListLeft {
+	float: left;
+}
+.navListRight {
+	float: right;
+}
+.nav {
+	width: 1235px;
+	margin: 0 auto;
+	background: #313444;
+	position: relative;
+	.indexLi, .normalLi {
+		float: left;
+		font-family: "宋体";
+		position: relative;
+		zoom: 1;
+		z-index: 999;
+		.channelName {
+			display: block; height: 40px; width: 100%;
+			color: #fff;
+			font-size: 14px; line-height: 40px;
+			text-indent: 18px;
+			&:hover {
+				color: #fff;
+				background-color: #1a1a1d;
+			}
+		}
+	}
+	.normalLi {
+		.channelName {
+			background: url(icon_nav.gif) 100% 0 no-repeat;
+			&:hover {
+				background: #1a1a1d url(icon_nav.gif) no-repeat 100% -40px;
+			}
+		}
+	}
+	/* 首页 */
+	.indexLi {
+		width: 64px;
+	}
+
+	/* 电影，动漫，综艺 */
+	.movieLi, .cartoonLi, .tamashaLi {
+		width: 82px;
+	}
+
+	/* 电视剧 */
+	.tvLi {
+		width: 96px;
+	}
+
+	/* 短视频 */
+	.shortVideoLi {
+		width: 78px;
+	}
+	/*** 视频vip ***/
+	.videoVipLi {
+		width: 84px;
+	}
+
+	.hover {
+		.channelName {
+			color: #fff;
+			background-color: #1a1a1d;
+		}
+	}
+	.checked {
+		.channelName {
+			background-color: #3083fd;
+			&:hover {
+				background-color: #3083fd;
+				background-position: 100% -40px;
+			}
+		}
+	}
+	.channelTips {
+		position: absolute; left: 0; top: 40px;
+		overflow: hidden;
+		display: none; width: 278px; height: 85px;
+		background: #1a1a1d;
+		a {
+			color: #fff;
+			&:hover {
+				color: #3083fd;
+			}
+		}
+		.channelTipsTop {
+			padding-top: 20px;
+		}
+		.channelTipsLeft {
+			float: left;
+			width: 86px;
+			height: 46px;
+			border-right: 1px dotted #838384;
+			p {
+				padding-left: 19px;
+				line-height: 13px;
+				margin-bottom: 21px;
+				_line-height: 14px;
+				_margin-bottom: 16px;
+			}
+		}
+		.channelTipsRight {
+			float: right;
+			width: 184px; height: 46px;
+			margin-left: 5px;
+			li {
+				display: block; width: 45px;
+				line-height: 13px;
+				text-align: center;
+				margin-bottom: 21px;
+				float: left;
+				_line-height: 14px;
+				_margin-bottom: 16px;
+			}
+		}
+	}
+}
+
+/* 检索框 */
+.navListRight {
+	float: right;
+	padding-right: 72px;
+	position: relative;
+}
+.searchBottomLeft {
+	margin-top: 6px;
+	width: 170px; height: 24px;
+	border: 1px solid #969696;
+	background: #ebebeb;
+	margin-right: -1px;
+	position: relative;
+	.search-input {
+		height: 18px;
+		border: none; outline: none;
+		font-size: 12px;
+		color: #333;
+		margin-left: 4px;
+		margin-top: 3px;
+		width: 166px;
+		background: none;
+	}
+}
+.searchBottomBtn {
+	width: 72px; height: 26px;
+	position: absolute; right: 0; top: 6px;
+	a {
+		display: block; width: 100%; height: 100%;
+		background: url(searchBtn.png) 0 0 no-repeat;
+		&:hover {
+			background: url(searchBtn.png) 0 -26px no-repeat;
+		}
+	}
+}
+
+.isWB {
+	width: 72px; height: 26px;
+	position: absolute; right: 0; top: 6px;
+	a {
+		display: block; width: 100%; height: 100%;
+		background: url(searchWBBtn.png) 0 0 no-repeat;
+		&:hover {
+			background: url(searchWBBtn.png) 0 -26px no-repeat;
+		}
+	}
+}
+
+/* sugs */
+.sug-wrapper {
+    position: absolute;
+    top: 25px;
+    left: -1px;
+    width: 170px;
+    border: 1px solid #969696;
+    background: #ebebeb;
+    color: #333;
+    cursor: default;
+    z-index: 10;
+    display: none;
+    zoom: 1;
+}
+
+.sug-wrapper li {
+    line-height: 24px;
+    text-indent: 8px;
+    width: 100%;
+    height: 100%;
+}
+
+.sug-wrapper li.curr {
+    background: #f8f8f8;
+}
+
+.w1024 {
+	.nav {
+		width: 1000px;
+	}
+}
+/* 视频声明 */
+.video-statement {
+	position: absolute; top: 3px; right: 260px;
+	width: 96px; 
+	overflow: hidden;
+	color: #3083fd;
+}

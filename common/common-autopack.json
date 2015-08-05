@@ -1,0 +1,22 @@
+{
+	"pack": {
+        "pkg/common_ui_video.css" : [
+	        "/widget/video/**.less"
+	    ],
+	    "pkg/common_ui_hao123.css" : [
+	        "/widget/hao123/**.less"
+	    ],
+	    "pkg/common_ui_player.css" : [
+	        "/widget/player/**.less"
+	    ],
+	    "pkg/common_video.js" : [
+	        "/widget/video/**.js"
+	    ],
+	    "pkg/common_hao123.js" : [
+	        "/widget/hao123/**.js"
+	    ],
+	    "pkg/common_player.js" : [
+	        "/widget/player/**.js"
+	    ]
+    }
+}

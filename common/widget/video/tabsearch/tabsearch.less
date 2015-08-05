@@ -1,0 +1,51 @@
+#tabsearch {
+	float: left;
+	width: 582px;
+	.tabs {
+		height: 22px;
+		padding-top: 20px;
+		font:200 14px/15px "\5FAE\8F6F\96C5\9ED1","\5B8B\4F53",Arial,sans-serif;
+		a {
+			margin-right: 18px;
+			color:#555;
+			font-size:14px;
+			font-family:"\5FAE\8F6F\96C5\9ED1","\5B8B\4F53",Arial,sans-serif;
+		}
+		strong {
+			margin-right: 18px;
+			color:#333;
+			font-family:"\5FAE\8F6F\96C5\9ED1","\5B8B\4F53",Arial,sans-serif;
+			font-size:14px;
+		}
+	}
+	.bd {
+		height: 32px;
+	}
+}
+
+// 适配吸顶头部UI
+.hdmini #tabsearch {
+	float: none;
+	margin: 0 auto;
+	padding-left: 20px;
+	.tabs {
+		display: none;
+	}
+	.bd {
+		padding-top: 17px;
+	}
+}
+
+// 适配窄屏头部
+.hdmini{
+	.hd-inner2.w984{
+		#tabsearch{
+			padding-left: 63px;
+		}
+	}
+}
+
+// 响应式1024适配
+.w1024 .hdmini #tabsearch {
+	margin: 0 0 0 260px;
+}

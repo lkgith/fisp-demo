@@ -1,0 +1,195 @@
+#userbar {
+	position: absolute;
+	right: 0;
+	top: 5px;
+	z-index: 100;
+	zoom: 1;
+	color: #000;
+	font: 12px/20px Arial;
+	text-align: right;
+	a {
+		margin-left: 6px;
+		color: #393C54;
+		text-decoration: underline;
+	}
+	img {
+		border: none;
+	}
+	li {
+		float: left;
+	}
+	.uname {
+		font-weight: bold;
+	}
+	.line {
+		display: inline;
+		width: 1px;
+		height: 12px;
+		overflow: hidden;
+		margin: 3px 0 0 6px;
+		border: none;
+		padding: 0;
+		background: #AAA;
+		color: #AAA;
+	}
+	.msgs {
+		color: #00C;
+		span {
+			color: #F00;
+		}
+	}
+	.link-name {
+		display: inline-block;
+		padding-right: 26px;
+	}
+	.uname, .nindex {
+		position: relative;
+	}
+	.tip {
+		display: none;
+		position: absolute;
+		width: 75px;
+		top: 20px;
+		left: 5px;
+		z-index: 10;
+		border: 1px solid #999;
+		background: #fff;
+		font-weight: normal;
+		box-shadow: 1px 1px 2px #ccc;
+		-moz-box-shadow: 1px 1px 2px #ccc;
+		-webkit-box-shadow: 1px 1px 2px #ccc;
+		text-align: left;
+		color: #888;
+		a {
+			margin-left: 0;
+			text-decoration: none;
+		}
+		ul {
+			li {
+				float: left;
+				width: 100%;
+				white-space: nowrap;
+			}
+			a {
+				display: block;
+				zoom: 1;
+				padding: 3px 6px;
+				text-decoration: none;
+				&:hover {
+					background: #ebebeb;
+				}
+			}
+			.my-info {
+				border-bottom: 1px solid #ebebeb;
+			}
+		}
+	}
+	.show_icons {
+		float: left;
+		margin-right: 3px;
+		vertical-align: top;
+	}
+	.uname-hover {
+		.tip {
+			display: block;
+		}
+	}
+	&.vip {
+		.link-name {
+			padding-right: 0;
+		}
+	}
+	&.vip-super {
+		.link-name {
+			background: url(http://vs3.bdstatic.com/pc_static/common/userbar/icon_vip_super.gif) 100% 2px no-repeat;
+		}
+	}
+}
+
+// 适配吸顶头部UI
+.hdmini #userbar {
+	top: 20px;
+	right: 42px;
+	li {
+		&.link, &.line {
+			display: none;
+		}
+	}
+	.link-login, .link-name, .link-nindex {
+		display: block;
+		padding: 20px 5px 2px;
+		background: url(icon_login.png) 50% 0 no-repeat;
+		font-size: 12px;
+		line-height: 27px;
+		text-decoration: none;
+		&:hover {
+			background:url(icon_login_hover.png) 50% 0  no-repeat;
+			color: #3083fd;
+		}
+	}
+
+	.link-nindex{
+		background-image: url(icon_nindex.png);
+		padding-left: 0;
+		&:hover{
+			background-image: url(icon_nindex_hover.png);
+		}
+	}
+
+	.no-login {
+		li.login {
+			a.link-reg {
+				display: none;
+			}
+		}
+	}
+	.tip {
+		top: 42px;
+		left: 50%;
+		width: 115px;
+		margin-left: -55px;
+		border: none;
+		padding-top: 9px;
+		background: #FFF url(bg_logged.png) 50% 0 no-repeat;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		ul {
+			border: 1px solid #DBDBDB;
+			border-top: 0;
+		}
+		li {
+			float: none;
+			width: auto;
+			a {
+				display: block;
+				float: none;
+				width: auto;
+				padding-left: 27px;
+				color: #333;
+				font-size: 14px;
+				line-height: 40px;
+				&:hover {
+					background: none;
+					color: #3083fc;
+				}
+				&.my-info {
+					border-bottom: 1px solid #ebebeb;
+				}
+			}
+		}
+	}
+	.uname-hover {
+		.link-name {
+			color: #3083fc;
+		}
+	}
+}
+
+.w1024{
+	.hdmini {
+		.logged .nindex, .no-login .nindex{
+			display: none;
+		}
+	}
+}

@@ -1,0 +1,30 @@
+<% /******************************************** *
+ * 文件注释，说明文件名称和文件所包含内容
+ * @file indexRightFloat.tmpl
+ * @author shangwenhe
+ * @create time 2015年06月03日10:51
+ * @version {版本信息}  v0.0.1
+ *
+*********************************************/ %>
+<div class="index_AD_right_close">
+	<a title="右侧悬浮广告" class="close" href="javascript:void(0)"></a>
+</div>
+<div class="adContainer">
+
+<% 
+	var data = data && data.slice(0,3) || []; 
+	for(var i = 0, len = data.length; i < len; i++) {
+	var item = data[i];
+%>
+
+<div id="adRightFloat<%=i%>" 
+    class="index_AD_right_fixed 
+    <% if( item.title && len < 3 ){ %> has-title <% } %> AD-close-status
+	<% if (item.intro == 1) { %> index_AD_right_fixed_big<% } %> ">
+	<a class="normal" target="_blank" href="<%=item.url%>" static="bl=index_AD_right_fixed&stp=adv_right_90">
+		<img  src="<%=item.imgh_url || item.imgv_url%>" /><% if (item.intro != 1 && len < 3 ) { %><%=item.title%><% } %>
+	</a>
+	<a title="<%=item.title%>" class="close" href="javascript:void(0)"></a>
+</div>
+<% } %>
+</div>

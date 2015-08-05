@@ -1,0 +1,19 @@
+<div id="<%=me.$getId('wrap-' + data.length)%>" class="<%=me._getClass('wrap' + data.length)%>">
+    <div id="<%=me.$getId('inner')%>" class="<%=me._getClass('inner')%>">
+        <ul class="bdv-suggestion-hot-list">
+            <%
+                var ins = "baiduInstance('" + me.guid + "')";
+                for ( var i = 0, len = data.length; i < len && i < 10; i++ ) {
+                    var item = data[i];
+            %>
+                <li id="<%=me.$getId('item' + i)%>" onmouseover="<%=ins + '._mouseOver(event, ' + i + ')'%>" onmouseout="<%=ins + '._mouseOut(event, ' + i + ')'%>" onmousedown="<%=ins + '._mouseDown(event, ' + i + ')'%>" onclick="<%=ins + '._mouseClick(event, ' + i + ')'%>" class="bdv-suggestion-li-<%=i%><% if (item.hot_day == 1) { %> bdv-suggestion-li-new<% }else if (item.hot_day == 2) { %> bdv-sggestion-li-hot<% } %>">
+                    <span class="bdv-suggestion-no"><%=i+1%></span>
+                    <span class="bdv-suggestion-item"><%=item.title%></span>
+                </li>
+            <%
+                }
+            %>
+        </ul>
+        <div class="bdv-suggestion-hot-title"></div>
+    </div>
+</div>

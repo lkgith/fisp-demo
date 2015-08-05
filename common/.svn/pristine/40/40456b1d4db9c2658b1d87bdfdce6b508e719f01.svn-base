@@ -1,0 +1,27 @@
+<% /********************************************
+ *
+ * 文件注释，说明文件名称和文件所包含内容
+ * @file indexBannerTop.tmpl
+ * @author shangwenhe
+ * @create time 2015年06月03日10:51
+ * @version {版本信息}  v0.0.1
+ *
+*********************************************/ %>
+<%
+    var item = data && data[0] || [];
+    if( data && data.length >1 ){
+        item = data[Math.floor(Math.random() * data.length)];
+    }
+%>
+<% if(item && item.hot_day == 1){ %>
+    <div class="ad-top-banner" style='position:relative;margin-bottom:20px;' > 
+        <a href="<%=item.url%>" target="_blank" id="linkAdv984" static="stp=adv1234">
+            <img src="<%=item.imgh_url%>" alt="<%=item.title%>"/>
+        </a>
+        <a href="javascript:void(0)" 
+		   class="btnTopBannerClose" 
+		   style='position: absolute;
+	              top: 8px; right: 8px; width: 14px; height: 13px; 
+				  background: url(http://list.video.baidu.com/pc_static/promotion/icon_close.gif) 0 0 no-repeat;'></a>
+    </div>
+<% } %>

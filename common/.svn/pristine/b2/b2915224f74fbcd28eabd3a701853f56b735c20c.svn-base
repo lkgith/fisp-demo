@@ -1,0 +1,186 @@
+.nav-type-mini{
+  #nav{
+    display:none;
+  }
+  &#header{
+    height:auto;
+    background:#393755;
+    &.hdmini{
+      .bd{
+        top: 26px;
+      }
+      #tabsearch {
+        padding-left: 125px;
+        .bd {
+          padding-top: 9px;
+        }
+        .bdv-search{
+          height: auto;
+          .bdv-search-inputs{
+            background:#fff;
+            height: auto;
+            width:auto;
+            input{
+              margin:5px;
+              height: 19px;
+              _height: 17px;
+              width: 340px;
+              line-height: 19px;
+            }
+          }
+          .bdv-search-btns{
+            height: auto;
+            input {
+              height: 29px;
+            }
+          }
+        }
+      }
+      .hd-inner{
+        background:none;
+        border: none;
+        height: 49px;
+        width:1235px;
+        position: relative;
+        .hd-logo{
+          position:absolute;
+          left:0;
+          top:0;
+          a{
+            display:none;
+            width: 116px;
+            height: 46px;
+            background:url(http://vs4.bdstatic.com/logo/logo_white.png) center center no-repeat;
+          }
+        }
+      }
+      .hd-nav{
+        #navmini{padding:0;}
+        top: 14px;
+        left: 127px;
+        display: block;
+        position: absolute;
+        .link-toggle{
+          width:79px;
+          height: 26px;
+          line-height: 26px;
+          text-indent: 17px;
+          i{
+            top: 12px;
+          }
+        }
+      }
+      .show {
+        padding: 0;
+        .link-toggle{
+          width: 79px;
+          padding-top: 0;
+          text-indent: 17px;
+          i{right: 13px;}
+        }
+      }
+      #userbar{
+        top: 12px;
+      }
+      .hd-record{
+        top: 12px;
+        display: block;
+        position: absolute;
+        right: 0;
+        padding-top: 0;
+        .bdv-record{
+          height:auto;
+        }
+      }
+      .hd-goback{
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 12px;
+
+        a{
+          display: block;
+          padding: 20px 0 2px;
+          background: url(../userbar/icon_back.png) 50% 0 no-repeat;
+          font-size: 12px;
+          line-height: 27px;
+          text-decoration: none;
+          color: #000;
+
+          &:hover{
+            background-image: url(../userbar/icon_back_hover.png);
+          }
+        }
+      }
+    }
+  }
+}
+//导航样式覆盖
+.nav-style-search{
+  background: #f0f0f0!important;
+  border-bottom: 1px solid #ccc!important;
+  .hd-record .bdv-record .bdv-record-toggle, .link-login, .link-name{
+    color:#000 !important;
+  }
+  &#header {
+	&.hdmini .hd-inner .hd-logo a{
+		background-image:url(http://vs4.bdstatic.com/logo/search/baidux.png)
+	}
+  }
+}
+
+.nav-style-search, .nav-style-browse{
+  &#header{
+    &.hdmini{
+      #userbar{
+        .link-login,.link-name{
+          display: inline;
+          padding: 0;
+          background: none;
+          font-family:"Microsoft Yahei";
+          color: #fff;
+        }
+        .tip{
+          top: 29px;
+          background:#fff;
+          padding: 0;
+          left:0;
+          li a{
+            line-height: 35px;
+            &:hover{
+              color:#333;
+              text-decoration:underline;
+            }
+          }
+          &:after{
+            content:'◆';
+            display:block;
+            position:absolute;
+            top:-10px;
+            right:20px;
+            color: #fff;
+            font-size: 20px;
+          }
+        }
+      }
+
+      .hd-record{
+        padding-top: 0;
+        .bdv-record{
+          .bdv-record-toggle{
+            padding: 0;
+            background: none;
+            color: #fff;
+          }
+        }
+        .bdv-record-arrow{
+          top: 25px;
+          left: 7px;
+        }
+        .bdv-record-main {
+          top: 29px;
+        }
+      }
+    }
+  }
+}

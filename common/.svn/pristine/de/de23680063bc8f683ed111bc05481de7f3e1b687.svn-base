@@ -1,0 +1,79 @@
+.hd-paopao{
+    float: left;
+    position: relative;
+    margin-left: 20px;
+    .hide{
+        display: none;
+    }
+    .show{
+        display: block;
+    }
+
+    .pop-wrap-big{
+        width: 184px;
+        height: 57px;
+        padding-top: 38px;
+        margin-top: 10px;
+        background: url(http://vs3.bdstatic.com/pc_static/shixiao/pop.png) no-repeat;
+        _background-image: none;
+        _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://vs3.bdstatic.com/pc_static/shixiao/pop.png');
+        .pop-close{
+            position: absolute;
+            left: 160px;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background: url(http://vs3.bdstatic.com/pc_static/shixiao/close.png) no-repeat;
+            _background-image: none;
+            _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://vs3.bdstatic.com/pc_static/shixiao/close.png');
+
+            &:hover{
+                background-image: url(http://vs3.bdstatic.com/pc_static/shixiao/close-hover.png);
+                _background-image: none;
+                _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://vs3.bdstatic.com/pc_static/shixiao/close-hover.png');
+            }
+        }
+
+        .pop-inner{
+            color: #fff;
+            width: 110px;
+            padding-left: 40px;
+            margin: 0 auto;
+            line-height: 18px;
+            height: 36px;
+            overflow: hidden;
+
+            .label{
+                float: left;
+                width: 40px;
+                margin-left: -40px;
+            }
+
+            a{
+                color: #fff;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    .pop-wrap-small{
+        display: none;
+        color: #467bd2;
+        width: 184px;
+        margin-top: 51px;
+        a{
+            color: #467bd2;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.w1024, .w984, .dimension-small, .dimension-normal{
+    .hd-paopao{
+        display: none;
+    }
+}

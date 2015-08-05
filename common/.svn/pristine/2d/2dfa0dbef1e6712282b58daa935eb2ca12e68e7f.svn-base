@@ -1,0 +1,23 @@
+<div id="<%=me.$getId('wrap-' + data.length)%>" class="<%=me._getClass('wrap' + data.length)%>">
+    <div id="<%=me.$getId('inner')%>" class="<%=me._getClass('inner')%>">
+        <ul class="bdv-suggestion-list">
+            <%
+                var ins = "baiduInstance('" + me.guid + "')";
+                for ( var i = 0, len = data.length; i < len; i++ ) {
+                    var item = data[i];
+                    var meta = item.meta;
+                    var typecn = meta && meta.type && videoTypes[meta.type];
+            %>
+                <li id="<%=me.$getId('item' + i)%>" onmouseover="<%=ins + '._mouseOver(event, ' + i + ')'%>" onmouseout="<%=ins + '._mouseOut(event, ' + i + ')'%>" onmousedown="<%=ins + '._mouseDown(event, ' + i + ')'%>" onclick="<%=ins + '._mouseClick(event, ' + i + ')'%>"<%if (typecn) { %>class="bdv-suggestion-<%=meta.type%>"<% } %>>
+                    <span style="color: <%=item.color%>" class="bdv-suggestion-item <%=item.newClass%>"><%=item.content.replace(query, '<span class="bdv-suggestion-query">' + query + '</span>')%><%if(meta && domain != "v.hao123.com" && meta.latest == "1"){ %><span class="bdv-suggestion-type"><em class="latest">新</em></span><% }else if (typecn) { %><span class="bdv-suggestion-type"><%=typecn%><i>></i></span><% } %></span>
+                </li>
+            <%
+                }
+            %>
+        </ul>
+        <div id="<%=me.$getId('videoitem')%>" class="<%=me._getClass('videoitem')%>"></div>
+        <div id="<%=me.$getId('close')%>" class="<%=me._getClass('close')%>">
+            <a href="javascript:void(0);" onclick="<%=ins + '._mouseClickClose(event)'%>">\u5173\u95ed</a>
+        </div>
+    </div>
+</div>

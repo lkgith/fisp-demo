@@ -1,0 +1,11 @@
+<div class="hd-focus">
+	<ul class="bdv-carousel-list">
+	<% for ( var i = 0, len = data.length; i < len; i++ ) { var item = data[i]; %>
+		<li class="bdv-carousel-item">
+			<a href="<%=item.url%>" target="_blank">
+				<img src="<%=item.img_url%>" alt="<%=item.title%>" />
+			</a>
+		</li>
+	<% } %>
+	</ul>
+</div>

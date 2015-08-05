@@ -1,0 +1,31 @@
+.hao123{
+	#logo {
+		float: left;
+		width: 200px;
+		height: 70px;
+		background: url('http://vs3.bdstatic.com/pc_static/common/logo_h.png?bdv=150121') 0 50% no-repeat;
+		padding-top:0;
+		a {
+			float: left;
+			height: 70px;
+			overflow: hidden;
+			text-indent: -999px;
+			&.link-hao123 {
+				width: 128px;
+			}
+			&.link-video {
+				width: 72px;
+			}
+		}
+	}
+	.hdmini {
+		#logo{
+			background-image:url("http://vs3.bdstatic.com/pc_static/common/floatLog.png?dbv=150130");
+			_background:none;
+			_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://vs3.bdstatic.com/pc_static/common/floatLog.png?dbv=150130");
+			height:50px;
+			width: 200px;
+		}
+
+	}
+}

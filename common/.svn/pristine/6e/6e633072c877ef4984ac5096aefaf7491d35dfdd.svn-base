@@ -1,0 +1,13 @@
+.footer {
+	padding: 20px 0 30px;
+	line-height: 24px;
+	text-align: center;
+	color: #666;
+	a {
+		color: #2d618f;
+		&:hover {
+			color: #2d618f;
+			text-decoration: underline;
+		}
+	}
+}

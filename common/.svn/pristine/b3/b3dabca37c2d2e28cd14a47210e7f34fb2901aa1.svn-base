@@ -1,0 +1,176 @@
+/**
+* @require "common:static/vendor/bootstrap/less/bootstrap.less";
+*/
+.feedback-modal{
+    background: none;
+  .modal-dialog {
+    width: 100%;
+    margin: 130px auto;
+    width: 700px;
+    height: 353px;
+  }
+  .modal-content{
+    padding: 12px 30px;
+  }
+  .dialog-close{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 30px;
+    height: 30px;
+    background: url(http://vs0.bdstatic.com/browse_static/widget/common/userbar/icons_1d46fcd0.png) -8px -8px no-repeat;
+    cursor: pointer
+  }
+
+  .tang-tab .tang-title {
+    width: 652px;
+    height: 42px;
+    clear: both
+  }
+
+  .tang-tab .tang-title .tang-title-item {
+    float: left;
+    margin-right: 3px;
+    position: relative;
+    top: 1px
+  }
+
+  .tang-tab .tang-title .tang-title-item a {
+    display: inline-block;
+    font-size: 14px;
+    color: #303030;
+    height: 36px;
+    line-height: 36px;
+    padding-left: 3px;
+    background: url(http://vs1.bdstatic.com/browse_static/widget/common/userbar/icons_1d46fcd0.png) no-repeat 0 -49px;
+    text-decoration: none;
+    outline: 0
+  }
+
+  .tang-tab .tang-title .tang-title-item a span {
+    display: inline-block;
+    background: url(http://vs1.bdstatic.com/browse_static/widget/common/userbar/icons_1d46fcd0.png) no-repeat right -96px;
+    padding: 0 12px 0 10px;
+    text-align: center
+  }
+
+  .tang-tab .tang-title .tang-title-item-selected a {
+    font-weight: bold;
+    background-position: 0 -144px;
+    height: 43px;
+    _height: 44px
+  }
+
+  .tang-tab .tang-title .tang-title-item-selected a span {
+    background-position: right -213px;
+    height: 43px;
+    _height: 44px
+  }
+
+  .tang-tab .tang-body {
+    width: 650px;
+    height: 120px;
+    clear: both
+  }
+
+  .tang-tab .tang-body .tang-body-item {
+    display: none
+  }
+
+  .tang-tab .tang-body .tang-body-item-selected {
+    display: block;
+    width: 650px;
+    height: 120px;
+    border: 1px solid #ddd;
+    border-width: 1px 1px 1px 1px
+  }
+
+  .tang-tab .tang-body textarea {
+    border: 0 none;
+    overflow: auto;
+    outline: 0;
+    resize: none;
+    width: 620px;
+    height: 90px;
+    margin: 15px 0 0 15px;
+    font-size: 14px
+  }
+
+  h2 {
+    font: 16px "微软雅黑",arial;
+    color: #666;
+    font-weight: bold
+  }
+
+  h2 span {
+    font: 30px arial;
+    color: #377cca;
+    font-style: italic;
+    margin-right: 8px
+  }
+
+  .feedback-contact {
+    height: 36px;
+    line-height: 36px
+  }
+
+  .feedback-contact input {
+    color: #9c9c9c
+  }
+
+  .feedback-contact .des {
+    float: left;
+    font-size: 14px
+  }
+
+  .box {
+    width: 286px;
+    height: 32px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    float: left;
+    margin-right: 10px
+  }
+
+  .box input {
+    border: 0;
+    width: 250px;
+    height: 20px;
+    outline: 0;
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: 14px;
+    vertical-align: top
+  }
+
+  .box input.focus {
+    color: #000
+  }
+
+  .sub-btn {
+    width: 116px;
+    height: 36px;
+    background: url(http://vs1.bdstatic.com/browse_static/widget/common/userbar/icons_1d46fcd0.png) 0 -400px;
+    overflow: hidden;
+    margin: 20px auto 0;
+    vertical-align: top;
+    cursor: pointer
+  }
+
+  .tang-body-item textarea {
+    color: #9c9c9c
+  }
+
+  .tang-body-item textarea.focus {
+    color: #000
+  }
+  }
+.modal-backdrop {
+  _position:absolute !important;
+  _width:100% !important;
+}
+/*----覆盖ie6 不支持多class选择器----*/
+.modal{
+  _position: absolute !important;
+  FILTER: alpha(opacity=100);
+}

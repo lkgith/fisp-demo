@@ -1,0 +1,339 @@
+.AD-close-status{
+	-webkit-transform:scale(0);
+	-ms-transform:scale(0);
+	-o-transform:scale(0);
+	-moz-transform:scale(0);
+	transform:scale(0);
+	// ie hack
+    display: none;
+	display: none\9;
+}
+.AD-hide-status{
+	display: none;
+}
+/*******顶部通栏广告***********/
+#index_banner_top{
+	margin: 10px 0;
+    .ad-top-banner{
+        position:relative;
+        margin: 10px 0;
+    }
+	img{
+		vertical-align:top;
+		width:100%;
+		height:auto;
+	}
+	.btnTopBannerClose{
+		position:absolute;
+		top:8px;
+		right:8px;
+		width:14px;
+		height:13px;
+		background:url(http://list.video.baidu.com/pc_static/promotion/icon_close.gif) 0 0 no-repeat;
+	}
+    #top_banner_cutdown,.top_banner_cutdown_bg {
+        position: absolute;
+        right: 0;
+        bottom: 0px;
+        color: #fff;
+        font-size: 16px;
+        text-align: right;
+        padding: 6px 10px 8px 22px;
+        z-index:3;
+        background:url('http://list.video.baidu.com/r/image/2015-05-20/d3f0e2055c65706babef37f9f4d7da6e.png') no-repeat left center;
+        i{
+            padding: 2px 4px;
+            margin:0 3px;
+            font-style: normal;
+            color: #fc3e39;
+            background: #fff;
+            -moz-border-radius: 3px; 
+            -webkie-border-radius: 3px; 
+            border-radius: 3px;
+        }
+
+    }
+    .top_banner_cutdown_bg{
+        background:#000;
+        filter:alpha(opacity=50); /*IE滤镜，透明度50%*/
+        -moz-opacity:0.5; /*Firefox私有，透明度50%*/
+        opacity:0.5;/*其他，透明度50%*/
+        width:215px;
+        height:37px;
+        z-index:1;
+        padding:0;
+        -webkit-border-top-left-radius: 10px;
+        -moz-border-radius-topleft:10px;
+        border-top-left-radius: 10px;
+    }
+}
+
+/**********底部通栏广告*************/
+#index_banner_bottom{
+	// height:105px;
+	img{
+		width:100%;
+		height:auto;
+	}
+
+}
+
+
+/********************************************
+  * 
+  * 右侧推广位添加关闭按钮
+  * @author shangwenhe
+  * @Modification time 2014年09月17日 14:45 
+  *
+************************************************/
+
+
+#index_right_float{
+	position:fixed;
+	_position:absolute;
+	bottom:310px;
+	width:38px;
+	height:1px;
+	margin-left:627px;
+	left:50%;
+	overflow:visible;
+	z-index:100;
+	.adContainer{
+		width:0;
+		height: 0;
+	}
+	&.narrow_right_float{
+		right:0;
+		left:auto;
+		margin-left:0;
+		.index_AD_right_fixed{
+
+			a.normal{
+				left:-57px;
+
+			}
+			a.close{
+				right:3px;
+			}
+		}
+		.index_AD_right_fixed_pro{
+			a.normal{
+				left:-67px;
+
+			}
+		}
+		.index_AD_right_fixed_big {
+			a.normal {
+				left: -58px;
+			}
+		}
+	}
+	.index_AD_right_close{
+		display:none;
+		height:38px;
+		margin-bottom:5px;
+		a.close{
+			position:absolute;
+			right:0px;
+			top:0px;
+			width:38px;
+			height:38px;
+			background:#bababa url(./close_status.png) no-repeat center center;
+			&:hover{
+				background-color:#3083fd;
+			}
+		}
+	}
+	.index_AD_right_fixed{
+		position:relative;
+		width:38px;
+		margin-bottom:1px;
+		height:100px;
+		-webkit-transition:1s;
+		-o-transition:1s;
+		-ms-transition:1s;
+		-moz-transition:1s;
+		transition:1s;
+		-webkit-transform-origin:0 0;
+		-moz-transform-origin:0 0;
+		-ms-transform-origin:0 0;
+		-o-transform-origin:0 0;
+		transform-origin:0 0;
+		a.close{
+			display:block;
+			position:absolute;
+			right:-53px;
+			top:3px;
+			width:16px;
+			height:16px;
+			padding:0;
+			background:url(./close.png) no-repeat center center;
+		}
+		a.normal{
+			position:absolute;
+			left:0px;
+			top:0px;;
+			width:75px;
+			display:block;
+			padding:10px;
+			line-height:18px;
+			color:#333;
+			text-decoration:none;
+			text-align:center;
+			white-space:nowrap;
+			background-color:#bababa;
+			&:hover{
+				background-color:#3083fd;
+				color:#FFF;
+			}
+			img{
+				display:block;
+				width:75px;
+				height:75px;
+				margin-bottom:5px;
+			}
+		}
+		
+	}
+    .has-title{
+        height:113px;
+        margin-bottom: 6px;
+    }
+
+	/**大尺寸图片**/
+	.index_AD_right_fixed_big {
+        height: 158px;
+		a.close {
+			right: -98px;
+		}
+		a.normal {
+			width: 140px;
+			padding: 0;
+			background: none;
+			&:hover {
+				background: none;
+			}
+			img {
+				width: 140px;
+				height: 163px;
+				margin: 0;
+			}
+		}
+	}
+	//右侧悬浮节日广告，直接是一张较大图片
+	.index_AD_right_fixed_pro{
+		a.normal {
+			width: 105px;
+			padding: 0;
+			background: none;
+			&:hover {
+				background: none;
+			}
+			img {
+				width: 105px;
+				height: 160px;
+				margin: 0;
+			}
+		}
+		a.close{
+			background: url(close_new.png);
+			right: -65px;
+			top:2px;
+		}
+	}
+}	
+.index_AD_right_float_big{
+	position:fixed;
+	_position:absolute;
+	bottom:85px;
+	width:470px;
+	height: 412px;
+	margin-right:-617px;
+	right:50%;
+	overflow:visible;
+	z-index:1000;
+	-webkit-transition:1s;
+	-o-transition:1s;
+	-ms-transition:1s;
+	-moz-transition:1s;
+	transition:1s;
+	-webkit-transform-origin:100% 80%;
+	-moz-transform-origin:100% 80%;
+	-ms-transform-origin:100% 80%;
+	-o-transform-origin:100% 80%;
+	transform-origin:100% 80%;
+	.index_AD_right_float_poster{
+		width:345px;
+		height: 195px;
+		position: absolute;
+		right:21px;
+		bottom:101px;
+		img{
+			width:100%;
+			height:100%;
+		}
+	}
+	.time-num{
+		color:#e0d5d5;
+		font-size: 14px;
+		position: absolute;
+		top:5px;
+		right:5px;
+	}
+	.ad-poster-sub-instro{
+		position: absolute;
+		right:22px;
+		top:80px;
+		font-size: 14px;
+		color:#e0d5d5;
+		&:hover{
+			color:#FFF
+		}
+	}
+}
+.w1024 {
+	.adv-right-top2 {
+		display: none;
+	}
+}
+
+.narrow_right_float{
+	.index_AD_right_float_big{
+		margin-right: -560px;
+	}
+}
+.w1024,
+.w1280{
+	.index_AD_right_float_big{
+		margin-right: 10px;
+		right:105px;
+	}
+}
+
+// 视频播放按钮
+
+a{
+	.play-video-icon{
+		opacity: 0;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-top: -35px;
+		height: 70px;
+		width: 71px;
+		margin-left: -35px;
+		-webkit-transition: opacity .4s ease-in;
+		-moz-transition: opacity .4s ease-in;
+		-ms-transition: opacity .4s ease-in;
+		transition: opacity .4s ease-in;
+		bottom: auto;
+	}
+	&:hover .play-video-icon{
+		opacity: 1;
+		background: url(http://vs4.bdstatic.com/pc_static/common/icon/playicon_60.png) no-repeat center center;
+		_cursor: pointer;
+		_background-image: none;
+		_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://vs4.bdstatic.com/pc_static/common/icon/playicon_60.png');
+	}
+}
+

@@ -1,0 +1,82 @@
+.hao123 {
+	#nav {
+		background: #0aa770;
+		.nav-inner {
+			width: 1235px;
+			height: 40px;
+			margin: 0 auto 10px;
+			background: #0aa770;
+			font-family: "Microsoft YaHei", "\5FAE\8F6F\96C5\9ED1", "\5B8B\4F53", Arial, sans-serif;
+		}
+		
+		li {
+			float: left;
+			a {
+				position: relative;
+				float: left;
+				color: #FFF;
+				line-height: 40px;
+				text-decoration: none;
+				&:hover {
+					background: #0bbb77;
+				}
+			}
+			&.current {
+				a {
+					background: #118860;
+				}
+			}
+		}
+		.main {
+			float: left;
+			a {
+				padding: 0 15px;
+				font-size: 16px;
+			}
+		}
+		.sub {
+			float: right;
+			font-family: "\5B8B\4F53", Arial, sans-serif;
+			a {
+				padding: 0 10px 0 0;
+				font-size: 12px;
+				&:hover {
+					background: none;
+					text-decoration: underline;
+				}
+			}
+			li {
+				&.new {
+					position: relative;
+					img {
+						position: absolute;
+						top: 5px;
+						right: -5px;
+					}
+				}
+				&.herounion {
+					position: relative;
+					img {
+						position: absolute;
+						top: 13px;
+						left: -35px;
+					}
+				}
+			}
+		}
+	}	
+}
+// 响应式1024适配
+.w1024 #nav {
+	.nav-inner {
+		width: 1000px;
+		.main {
+			a {
+				padding: 0 10px;
+			}
+		}
+	}
+}
+.w1024old #nav .nav-inner {
+	width: 984px;
+}

@@ -1,0 +1,7 @@
+<% for ( var i = 0, len = menu.length; i < len; i++ ) { var item = menu[i]; %>
+	<li<% if ( pageTn && item.s_intro == pageTn ) { %> class="current"<% } %>>
+		<a href="<%=item.url%>"<% if (item.update == 1) { %> target="_blank"<% } %>><%=item.title%><% if (item.hot_day > 0) { %>
+		<img src="<%=item.imgh_url%>" style="bottom:<%=item.duration || 30%>px;left:<%=item.rating||3%>px">
+		<% } %></a>
+	</li>
+<% } %>

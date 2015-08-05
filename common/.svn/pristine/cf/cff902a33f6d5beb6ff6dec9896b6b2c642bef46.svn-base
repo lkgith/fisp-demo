@@ -1,0 +1,356 @@
+.hao123 {
+	//普通头部
+	#header {
+		background-color: #fff;
+		height: auto;
+		.hd-wrapper {
+			zoom:1;
+		}
+		.hd-nav {
+			display: none;
+		}
+		.hd-inner {
+			position: relative;
+			z-index: 100;
+			width: 1235px;
+			height: 70px;
+			margin: 0 auto;
+			.link-support {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100px;
+				height: 70px;
+				overflow: hidden;
+				background: url('http://vs3.bdstatic.com/pc_static/common/logo_v.png?bdv=150121') 0 0 no-repeat;
+				text-indent: -999px;
+			}
+			.hd-record {
+				position: absolute;
+				top: 0;
+				right: 120px;
+				width: 100px;
+				height: 70px;
+				padding: 0;
+			}
+			.hd-search {
+				position: absolute;
+				top: 19px;
+				right: 230px;
+				width: 380px;
+				height: 32px;
+			}
+			/* 
+			 * hao1213导航改版后去掉推广位及轮播热点区，先注释掉啦
+			 */
+			/*  
+			// 推广位样式
+			.hd-focus {
+				position: absolute;
+				top: 18px;
+				left: 205px;
+				width: 110px;
+				height: 51px;
+				overflow: hidden;
+				.bdv-carousel-list {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 110px;
+					height: 51px;
+					li {
+						float: left;
+						width: 110px;
+						height: 51px;
+						a, img {
+							width: 100%;
+							height: 100%;
+						}
+					}
+				}
+			}
+			// 轮播广告样式
+			.hd-news {
+				position: absolute;
+				top: 14px;
+				right: 265px;
+				width: 370px;
+				height: 20px;
+				color: #333;
+				line-height: 20px;
+				a:hover {
+					color: #ee3636;
+					text-decoration: underline;
+				}
+				h3 {
+					float: left;
+					padding-left: 20px;
+					background: url(icon_news.png) 0 50% no-repeat;
+				}
+				.bd {
+					position: absolute;
+					top: 0;
+					left: 92px;
+					width: 278px;
+					height: 20px;
+					overflow: hidden;
+					.bdv-carousel-list {
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 278px;
+						height: 20px;
+						li {
+							height: 20px;
+							overflow: hidden;
+							white-space: nowrap;
+						}
+					}
+				}
+			}
+			*/
+		}
+	}
+	
+	// 适配吸顶头部UI
+	#header.hdmini {
+		margin-bottom: 70px;
+		*margin-bottom: 69px;
+		_margin-bottom: 20px;
+		*padding-bottom: 1px;
+		_padding-bottom: 0;
+		.hd-inner {
+			position: relative;
+			width: auto;
+			_width: 1235px;
+			max-width: 1235px;
+			height: 50px;
+			background: #0aa770;
+			border-bottom: 0 none;
+			.link-support {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 100px;
+				height: 50px;
+				overflow: hidden;
+				background: url('http://vs3.bdstatic.com/pc_static/common/supportLogo.png?bdv=150130') center center no-repeat;
+				_background:none;
+				_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://vs3.bdstatic.com/pc_static/common/supportLogo.png?bdv=150130");
+				text-indent: -999px;
+			}
+			.hd-search {
+				top: 10px;
+				width: 280px;
+				right:345px;
+			}
+		}
+		.hd-wrapper {
+			position: fixed;
+			_position: relative;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+			width: 100%;
+			height: 50px;
+			background: #0aa770;
+		}
+		.w984{
+			width:984px;
+		}
+		.hd-nav {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 168px+100px;
+			width: 220px;
+		}
+		.hd-nav.hd-sub-logo-no {
+			left: 173px;
+			.hd-sub-logo {
+				display: none;
+			}
+		}
+		.hd-trace, .hd-keyword {
+			display: none;
+		}
+		.hd-record {
+			display: block;
+			position: absolute;
+			top: 0px;
+			right: 100px;
+			padding-top: 0;
+			height:50px;
+			.bdv-record-hao123{
+				padding:0;
+				background:none;
+				.bdv-record-toggle{
+					height:38px;
+					background:url("http://vs4.bdstatic.com/pc_static/common/slogo_recode.png?bdv=150121") no-repeat 9px -33px;;
+					_background:url("http://vs4.bdstatic.com/pc_static/common/slogo_recode.gif?bdv=150121") no-repeat 9px -33px;;					
+					color:#fff;
+					padding:12px 11px 0px 31px;
+					width:53px;
+					position:relative;
+					i{
+						display: block;
+						top: 23px;
+						right: 5px;
+						border-color:#fff #0aa770 #0aa770;
+					}
+				}
+				.bdv-record-main{
+					left: 0px;
+					top: 50px;
+				}
+			
+			}
+			.bdv-record-show {		
+				.bdv-record-toggle {
+					background-position: 9px -89px;
+					background-color: #f0f0f0;
+					color:#666;
+					i {
+						border-color: #666 #f0f0f0 #f0f0f0;
+					}
+				}
+				.bdv-record-main {
+					-webkit-box-shadow: 0px 2px 2px #f0f0f0;
+					-moz-box-shadow: 0px 2px 2px #f0f0f0;
+					box-shadow: 0px 2px 2px #f0f0f0;
+					_border-bottom: 2px solid #d1cfd0;
+					.bdv-record-content li:hover {
+						background: transparent;
+					}
+				}
+			}
+		}
+		.hd-qlinks {
+			display: block;
+			position: absolute;
+			top: 20px;
+			right: 46px;
+			a {
+				display: block;
+				color: #313444;
+				&:hover {
+					color: #3083fc;
+				}
+				&.link-vip {
+					padding: 20px 5px 0;
+					background: url(icon_vip.png) 50% 0 no-repeat;
+					font-size: 12px;
+					line-height: 27px;
+					&:hover{
+						background: url(icon_vip_hover.png) 50% 0 no-repeat;
+					}
+				}
+			}
+		}
+		/* logo宽高度限制 */
+		#logo {
+			a {
+				height: 50px;
+			}
+			.link-hao123 {
+				width: 112px;
+			}
+			.link-video {
+				width: 55;
+			}
+		}
+	}
+	#topbar{
+		height:27px;
+		border-bottom: 1px solid #e6e6e6;		
+	}
+	#topbar.hdmini{
+		height:0;
+		line-height: 0px;
+		position: fixed;
+		_position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: 10000;
+		.inner{
+			height: 0;
+			position: relative;
+			_position: relative;
+			z-index:1001;
+			.menumain,
+			.menusub,
+			.quicklinks{
+				display:none;
+			}
+			.userbar{
+				right: 195px;
+				top: 1px;
+				_position: absolute;
+				height: 49px;
+				background-color: #0aa770;
+				z-index: 10000;
+				.link-user, .link-login {
+					color: #fff;
+					height: 100%;
+					line-height: 50px;
+					_height: 49px;
+					_line-height: 49px;
+					background: url('h_mini_logo.png') 10px 16px no-repeat;
+				}
+				a{
+					color:#fff;
+					font-family:"\5FAE\8F6F\96C5\9ED1","\5B8B\4F53",SimSun,tahoma,arial,sans-serif;
+				}
+				i{
+					border-color: #fff #0aa770 #0aa770;
+					top: 24px;
+				}
+				.link-bd {
+					top: 49px;
+				}
+				.link-login, a.link-login:visited {
+					height: 50px;
+					line-height: 50px;
+					_height: 49px;
+					_line-height: 49px;
+					color: #fff;
+					background: url('h_mini_logo.png') 14px 17px no-repeat;
+					&:hover {
+						color: #8e9999;
+						_background: url('h_du.gif') 14px 19px no-repeat;
+					}
+				}
+			}			
+			.userbar.userbar-hover {
+				background-color: #f0f0f0;
+				color: #fff;
+				.link-user {				
+					background: url('h_mini_du_hover.gif') 10px 18px no-repeat;
+				}
+				.link-login {
+					background: url('h_mini_du_hover.gif') 14px 18px no-repeat;
+				}
+				.link-user, .link-qt {
+					color: #8e9999;
+				}
+				i {
+					border-color: #8e9999 #f0f0f0 #f0f0f0;
+				}
+			}
+		}
+	}
+	#nav.hdmini {
+		display: none;
+	}
+}
+
+// 响应式1024适配
+.hao123.w1024 .hd-inner,
+.hao123.w1024 #header .hd-inner,
+.hao123.w1024 #header.hdmini .hd-inner {
+	width: 1000px;
+}
+.w1024old #header .hd-inner{
+	width: 984px;
+}

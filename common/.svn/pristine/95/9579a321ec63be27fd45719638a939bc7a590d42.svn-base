@@ -1,0 +1,484 @@
+// reset
+.bdv-trace {
+    p, ul, ol, dl {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul, ol {
+        list-style: none;
+    }
+}
+
+// bdv-trace
+.bdv-trace {
+    float: left;
+    height: 35px;
+    position: relative;
+    z-index: 110;
+
+    // toggle
+    .bdv-trace-toggle {
+        color: #3471d1;
+        float: left;
+        font: 12px/27px "\5FAE\8F6F\96C5\9ED1",SimSun, tahoma, arial, sans-serif;
+        margin-top: 5px;
+        padding-right: 10px;
+        position: relative;
+        z-index: 2;
+
+        &:link,
+        &:hover,
+        &:active,
+        &:visited {
+            text-decoration: none;
+        }
+
+        i {
+            background: url(http://vs3.bdstatic.com/pc_static/open/record/icons.png) 0 -260px;
+            _background-image: url(http://vs3.bdstatic.com/pc_static/open/record/ie_icons.png);
+            curosr: pointer;
+            height: 4px;
+            overflow: hidden;
+            position: absolute;
+            right: 0;
+            top: 11px;
+            width: 7px;
+        }
+    }
+
+    // icons
+    .bdv-trace-icons {
+        background: url(http://vs3.bdstatic.com/pc_static/bdv_trace/icons.png) no-repeat 0 0;
+        overflow: hidden;
+        position: absolute;
+    }
+
+    /*
+    .bdv-trace-tip {
+        background-position: 0 0;
+        color: #ff6815;
+        display: none;
+        font-size: 12px;
+        height: 37px;
+        line-height: 34px;
+        left: 0;
+        top: -27px;
+        width: 185px;
+
+        a.bdv-trace-tip-no-more {
+            color: #969696;
+            text-decoration: underline;
+
+            &:hover {
+                color: #969696;
+            }
+        }
+
+        a.bdv-trace-tip-close {
+            color: #969696;
+            height: 10px;
+            line-height: 10px;
+            position: absolute;
+            right: 3px;
+            top: 5px;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+
+    .bdv-trace-tip {
+        background: none;
+        display: none;
+        height: 71px;
+        left: -36px;
+        top: 24px;
+        width: 170px;
+        z-index: 100;
+
+        .bdv-trace-tip-bg {
+            background: url(http://vs3.bdstatic.com/pc_static/bdv_trace/tip.png) no-repeat;
+            _background-image: none;
+            _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://vs3.bdstatic.com/pc_static/bdv_trace/tip.png', sizingMethod='crop');
+            height: 71px;
+            width: 170px;
+        }
+
+        a {
+            position: absolute;
+            z-index: 101;
+        }
+
+        .bdv-trace-tip-no-more {
+            bottom: 8px;
+            color: #666;
+            font-size: 12px;
+            left: 61px;
+            text-decoration: underline;
+
+            &:hover {
+                color: #666;
+            }
+        }
+
+        .bdv-trace-tip-close {
+            color: #969696;
+            height: 20px;
+            line-height: 10px;
+            right: 0;
+            top: 7px;
+            width: 20px;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    */
+
+    .bdv-trace-record {
+        background-position: 0 -40px;
+        height: 23px;
+        width: 59px;
+    }
+
+    .bdv-trace-new {
+        background-position: 0 -66px;
+        height: 17px;
+        width: 18px;
+    }
+
+    .bdv-trace-notify {
+        background-position: -130px -73px;
+        display: none;
+        height: 9px;
+        right: 3px;
+        top: 5px;
+        width: 9px;
+        z-index: 3;
+    }
+    // END icons
+
+    .bdv-trace-arrow {
+        height: 11px;
+        left: 6px;
+        line-height: 11px;
+        overflow: hidden;
+        position: absolute;
+        top: -6px;
+        _top: -5px;
+        width: 11px;
+
+        em,
+        i {
+            font-family: SimSun;
+            font-size: 11px;
+            font-style: normal;
+            left: 0;
+            position: absolute;
+        }
+
+        em {
+            top: 0;
+            color: #d1d1d1;
+        }
+
+        i {
+            top: 1px;
+            color: #fff;
+        }
+    }
+}
+
+// 浮层已显示
+.bdv-trace-show .bdv-trace-toggle i {
+    background-position: 0 -280px;
+}
+
+// container
+.bdv-trace-main {
+    background: #fff;
+    border: 1px solid #d1d1d1;
+    box-shadow: 0 0 4px #eaeaea;
+    font: 12px/1.6 SimSun;
+    left: 0;
+    position: absolute;
+    top: 37px;
+    width: 294px;
+    z-index: 110;
+
+    a.bdv-trace-close {
+        color: #a1a1a1!important;
+        height: 10px;
+        line-height: 10px;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+
+        &:hover,
+        &:active {
+            color: #282828!important;
+            text-decoration: none;
+        }
+    }
+}
+
+// content
+.bdv-trace-content {}
+
+// content-container
+.bdv-trace-bd {}
+
+dl.bdv-trace-item {
+    border-bottom: 1px solid #f5f5f5;
+    overflow: hidden;
+    padding: 14px 17px;
+    width: 260px;
+
+    dt {
+        _height: 30px;
+        max-height: 30px;
+        overflow: hidden;
+        .fis-clearfix();
+
+        h3,
+        span {
+            float: left;
+        }
+
+        h3 {
+            font: 18px/1.6 'Microsoft YaHei';
+
+            a,
+            a:link,
+            a:visited {
+                color: #222;
+                text-decoration: none;
+            }
+
+            a:hover,
+            a:active {
+                color: #005bcc;
+                text-decoration: none;
+            }
+        }
+
+        span {
+            color: #999;
+            margin-top: 5px;
+
+            b {
+                color: #666;
+            }
+        }
+    }
+
+    // 剧集
+    .bdv-trace-item-episodes {
+        padding: 20px 0 10px;
+
+        ol {
+          .fis-clearfix();
+            margin-left: -6px;
+            _margin-left: -10px;
+            *width: 266px;
+            _width: 270px;
+        }
+
+        li {
+            float: left;
+            position: relative;
+            margin-left: 6px;
+            _zoom: 1;
+
+            a {
+                background: #fafafa;
+                border: 1px solid #f2f2f2;
+                display: block;
+                color: #6280c3;
+                font: 14px/28px arial;
+                height: 28px;
+                overflow: hidden;
+                text-align: center;
+                width: 36px;
+
+                &:visited {
+                    color: #444!important;
+                }
+
+                &:hover,
+                &:active {
+                    background: #68a1f2;
+                    border: 1px solid #68a1f2;
+                    color: #fff!important;
+                    text-decoration: none;
+                }
+            }
+
+            .bdv-trace-record {
+                left: 0;
+                top: -18px;
+            }
+
+            .bdv-trace-new {
+                right: 0;
+                top: -9px;
+            }
+
+            .bdv-trace-item-episode-holder,
+            .bdv-trace-item-episode-latest {
+                height: 30px;
+                line-height: 30px;
+            }
+
+            .bdv-trace-item-episode-holder {
+                color: #245fb3;
+                text-align: center;
+                width: 38px;
+            }
+
+            .bdv-trace-item-episode-latest {
+                color: #666;
+                font-family: 'Microsoft YaHei';
+                font-size: 16px;
+            }
+        } // END li
+    } // END .bdv-trace-item-episodes
+
+    // 综艺剧集
+    .bdv-trace-item-episodes-show {
+
+        ol {
+            margin-left: 0;
+        }
+
+        li {
+            margin-left: 0;
+            padding: 4px 0;
+
+            a {
+                background: #fff;
+                color: #6280c3;
+                font-size: 12px;
+                text-align: left;
+                width: 258px;
+
+                span {
+                    color: #999;
+                    display: inline!important;
+                    padding-left: 4px;
+                }
+
+                &:hover {
+                    span {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .bdv-trace-record {
+                left: auto;
+                right: 0;
+                top: -10px;
+            }
+
+            .bdv-trace-new {
+                right: 0;
+                top: -5px;
+            }
+
+            .bdv-trace-item-episode-holder {
+                height: 10px;
+                line-height: 10px;
+                width: 260px;
+            }
+        } // END li
+    } // END .bdv-trace-item-episodes
+
+    .bdv-trace-item-ft {
+      .fis-clearfix();
+        a {
+            color: #666!important;
+            font-size: 12px;
+
+            &:hover {
+                color: #6280c3!important;
+                text-decoration: none;
+            }
+        }
+
+        .bdv-trace-item-del {
+            float: right;
+        }
+
+        .bdv-trace-item-all {
+            float: left;
+        }
+    }
+}
+
+// content-footer
+.bdv-trace-ft {
+    background: #f5f5f5;
+    height: 38px;
+    .bdv-trace-pager,
+    .bdv-trace-pager-no {
+        display: block;
+        float: left;
+        height: 38px;
+        line-height: 38px;
+    }
+
+    a.bdv-trace-pager-left,
+    a.bdv-trace-pager-right {
+        color: #666!important;
+        text-align: right;
+        width: 40%;
+
+        &:hover,
+        &:active {
+            color: #6280c3!important;
+            text-decoration: none;
+        }
+    }
+
+    a.bdv-trace-pager-right {
+        text-align: left;
+    }
+
+    .bdv-trace-pager-no {
+        color: #999;
+        text-align: center;
+        width: 19%;
+    }
+}
+
+// no data
+.bdv-trace-none {
+    padding: 28px 0;
+    text-align: center;
+
+    p {
+        color: #666;
+        font: 16px/1.6 'Microsoft YaHei', SimHei;
+    }
+
+    a:link,
+    a:visited {
+        color: #005bcc;
+        text-decoration: none;
+    }
+
+    a:hover,
+    a:active {
+        color: #005bcc;
+        text-decoration: underline;
+    }
+}
+
+// 适配吸顶头部UI
+.hdmini .bdv-trace {
+    display: none;
+}

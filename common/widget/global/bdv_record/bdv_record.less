@@ -1,0 +1,410 @@
+// reset
+.bdv-record, .bdv-record div, .bdv-record, p,
+.bdv-record ul, .bdv-record li,
+.bdv-record a, .bdv-record span, .bdv-record i {
+	margin: 0;
+	padding: 0;
+}
+.bdv-record ul, .bdv-record li {
+	list-style: none;
+}
+
+// global
+.bdv-record {
+	position: relative;
+	z-index: 100;
+	float: left;
+	height: 35px;
+}
+
+// toggle
+.bdv-record .bdv-record-toggle {
+	position: relative;
+	z-index: 2;
+	float: left;
+	width: 59px;
+	margin-top: 5px;
+	padding-left: 16px;
+	background: url(http://vs3.bdstatic.com/pc_static/open/record/icons.png) 0 0 no-repeat;
+	color: #3471d1;
+	font: 12px/27px "\5FAE\8F6F\96C5\9ED1","\5B8B\4F53",SimSun, tahoma, arial, sans-serif;
+	*background-position: 0 2px;
+	_background-image: url(http://vs3.bdstatic.com/pc_static/open/record/ie_icons.png);
+}
+.bdv-record .bdv-record-toggle:link,
+.bdv-record .bdv-record-toggle:hover,
+.bdv-record .bdv-record-toggle:active,
+.bdv-record .bdv-record-toggle:visited {
+	text-decoration: none;
+}
+.bdv-record .bdv-record-toggle i {
+	position: absolute;
+	top: 11px;
+	right: 0;
+	width: 7px;
+	height: 4px;
+	overflow: hidden;
+	background: url(http://vs3.bdstatic.com/pc_static/open/record/icons.png) 0 -260px;
+	_background-image: url(http://vs3.bdstatic.com/pc_static/open/record/ie_icons.png);	
+	curosr: pointer;
+}
+.bdv-record-show .bdv-record-toggle i {
+	background-position: 0 -280px;
+}
+
+// num
+.bdv-record .bdv-record-num {
+	position: absolute;
+	top: 0;
+	left: 66px;
+	z-index: 3;
+	width: 13px;
+	height: 12px;
+	background: url(http://vs3.bdstatic.com/pc_static/open/record/icons.png) 0 -120px no-repeat;
+	_background-image: url(http://vs3.bdstatic.com/pc_static/open/record/ie_icons.png);
+	color: #FFF;
+	font: 12px/12px "\5B8B\4F53, tahoma, arial, sans-serif";
+	text-align: center;
+	*width: 12px;
+	*height: 11px;
+	*padding: 1px 0 0 1px;
+}
+
+// list
+.bdv-record-main {
+	position: absolute;
+	top: 32px;
+	left: 0;
+}
+.bdv-record-content {
+	width: 298px;
+	border: 1px solid #CACACA;
+	border-radius: 4px;
+	background: #FFF;
+	color: #A7A9AC;
+	font: 12px/28px "\5B8B\4F53, tahoma, arial, sans-serif";
+}
+.bdv-record-content li {
+	position: relative;
+	height: 28px;
+	border-bottom: 1px solid #E7E7E7;
+	padding: 7px 8px;
+	vertical-align: top;
+}
+.bdv-record-content li:hover {
+	background: #F6F6F6;
+}
+.bdv-record-content .bdv-record-item-title {
+	float: left;
+	max-width: 124px;
+	overflow: hidden;
+	font-size: 14px;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+.bdv-record-content .bdv-record-item-title:link, .bdv-record-content .bdv-record-item-title:visited {
+	color: #005BCC !important;
+	text-decoration: none;
+}
+.bdv-record-content .bdv-record-item-title:hover, .bdv-record-content .bdv-record-item-title:active {
+	color: #005BCC !important;
+	text-decoration: underline;
+}
+.bdv-record-content .bdv-record-icon-new {
+	float: left;
+	width: 13px;
+	height: 15px;
+	margin: 5px 4px 0 0;
+	background: url(http://vs3.bdstatic.com/pc_static/open/record/icons.png) 0 -140px no-repeat;
+	_background-image: url(http://vs3.bdstatic.com/pc_static/open/record/ie_icons.png);
+}
+.bdv-record-content .bdv-record-update {
+	float: left;
+	margin-left: 5px;
+}
+.bdv-record-content li .bdv-record-control {
+	position: absolute;
+	top: 13px;
+	right: 7px;
+	width: 15px;
+	height: 15px;
+	overflow: hidden;
+	background: url(http://vs3.bdstatic.com/pc_static/open/record/icons.png) 0 -160px no-repeat;
+	_background-image: url(http://vs3.bdstatic.com/pc_static/open/record/ie_icons.png);
+	line-height: 99px;
+}
+.bdv-record-content li .bdv-record-control:hover {
+	background-position: 0 -180px;
+}
+.bdv-record-type {
+	position: absolute;
+	top: 7px;
+	right: 31px;
+}
+
+/** footer */
+.bdv-record-content .bdv-record-ft {
+	height: 22px;
+	padding: 1px 9px 0 0;
+	line-height: 22px;
+	text-align: right;
+}
+.bdv-record-content .bdv-record-ft .bdv-record-control {
+	padding-left: 17px;
+	background: url(http://vs3.bdstatic.com/pc_static/open/record/icons.png) 0 -40px no-repeat;
+	_background-image: url(http://vs3.bdstatic.com/pc_static/open/record/ie_icons.png);
+}
+.bdv-record-content .bdv-record-ft .bdv-record-control:link,
+.bdv-record-content .bdv-record-ft .bdv-record-control:visited {
+	color: #828282 !important;
+	text-decoration: none;
+}
+.bdv-record-content .bdv-record-ft .bdv-record-control:hover,
+.bdv-record-content .bdv-record-ft .bdv-record-control:active {
+	background-position: 0 -80px;
+	color: #005BCC !important;
+	text-decoration: underline;
+}
+
+// noresult
+.bdv-record-noresult .bdv-record-bd {
+	height: 42px;
+	border-bottom: 1px solid #E7E7E7;
+	padding-left: 8px;
+	font-size: 14px;
+	line-height: 42px;
+}
+.bdv-record-noresult .bdv-record-ft a:link,
+.bdv-record-noresult .bdv-record-ft a:visited {
+	color: #005BCC;
+	text-decoration: none;
+}
+.bdv-record-noresult .bdv-record-ft a:hover,
+.bdv-record-noresult .bdv-record-ft a:active {
+	color: #005BCC;
+	text-decoration: underline;
+}
+
+// 和追剧模块同时出现
+.with-bdv-trace {
+
+    .bdv-record-toggle {
+        background-image: none;
+        padding-right: 10px;
+        width: auto;
+    }
+
+    // up arrow
+    .bdv-record-arrow {
+        display: none;
+        height: 11px;
+        left: 22px;
+        line-height: 11px;
+        overflow: hidden;
+        position: absolute;
+        top: 33px;
+        width: 11px;
+        z-index: 1;
+
+        em,
+        i {
+            font-family: SimSun;
+            font-size: 11px;
+            font-style: normal;
+            left: 0;
+            position: absolute;
+        }
+
+        em {
+            top: 0;
+            color: #d1d1d1;
+        }
+
+        i {
+            top: 1px;
+            color: #fff;
+        }
+    }
+
+    .bdv-record-main {
+        box-shadow: 0 0 4px #eaeaea;
+        left: -34px;
+        top: 37px;
+    }
+
+    .bdv-record-hd {
+        border-bottom: 1px solid #e7e7e7;
+        height: 18px;
+    }
+
+    a.bdv-record-close {
+        color: #a1a1a1!important;
+        height: 10px;
+        line-height: 10px;
+        position: absolute;
+        right: 8px;
+        top: 8px;
+
+        &:hover,
+        &:active {
+            color: #282828!important;
+            text-decoration: none;
+        }
+    }
+
+    .bdv-record-content {
+        border-radius: 0;
+
+        .bdv-record-ft {
+            background: #f5f5f5;
+            height: 34px;
+            line-height: 34px;
+
+            .bdv-record-control {
+                &:link,
+                &:visited {
+                    color: #666!important;
+                }
+            }
+        }
+
+        .bdv-record-item-title {
+            &:link,
+            &:visited {
+                color: #222!important;
+            }
+
+            &:hover,
+            &:active {
+                color: #222!important;
+            }
+        }
+
+        li:hover {
+            background-color: transparent;
+        }
+    }
+
+}
+
+.bdv-record-show {
+    .bdv-record-arrow {
+        display: block;
+    }
+}
+
+// 适配吸顶头部UI
+.hdmini .bdv-record {
+	height: 47px;
+	.bdv-record-toggle {
+		margin-top: 0;
+		padding: 20px 5px 0;
+		background: url(icon_record.png) 50% 0 no-repeat;
+		color: #313444;
+		font-family: "Microsoft YaHei", "微软雅黑", "宋体", Arial, sans-serif;
+		&:hover {
+			background:url(icon_record_hover.png) 50% 0 no-repeat;
+			color: #3083fd;
+		}
+		i {
+			display: none;
+		}
+	}
+	.bdv-record-arrow {
+		top: 43px;
+		left: 12px;
+	}
+	.bdv-record-main {
+		top: 47px;
+		left: -265px;
+	}
+}
+
+// hao123适配
+.hao123 {
+	.bdv-record-hao123 {
+		width: 80px;
+		height: 100%;		
+		padding: 0 10px;
+		
+		.bdv-record-toggle {
+			margin-top: 0;
+			height: 48px;
+			width: auto;
+			padding: 22px 11px 0 21px;
+			background: url('h_icon_history.gif') 0 28px no-repeat;
+			color: #666;
+			i {
+				top: 33px;
+				width: 0;
+				height: 0;
+				overflow: hidden;
+				border-style: solid;
+				border-width: 4px;
+				border-color: #666 #fff #fff;
+				-webkit-transform-origin: 50% 25%;
+				-webkit-transition: -webkit-transform .2s ease-in;
+				transform-origin: 50% 25%;
+				transition: trnasform .2s ease-in;
+				curosr: pointer;
+			}
+		}		
+		// 播放记录下拉列表
+		.bdv-record-main {
+			top: 70px;
+			.bdv-record-content {
+				width: 260px;
+				border: 0 none;
+				border-radius: 0;
+				background-color: #f0f0f0;
+				filter: alpha(opacity=95);
+				opacity: 0.95;
+				.bdv-record-bd {
+					padding-left: 10px;
+					color: #666;
+					padding-top: 18px;
+					border: 0 none;					
+				}
+				.bdv-record-ft {
+					position: relative;
+					background-color: #d4d8d8;
+					padding-right: 10px;
+					height: 30px;
+					line-height: 30px;
+					a:link, a:visited {
+						color: #2f83fd;
+					}					
+					.bdv-usercenter {
+						position: absolute;
+						left:10px;
+						top:0;
+						line-height: 22px;
+						padding-left: 17px;
+						background: url(http://vs3.bdstatic.com/pc_static/open/record/icons.gif?v=20140718) 0 -258px no-repeat;
+						color: #828282;
+						&:hover{
+							background-position: 0 -277px;
+							color: #005BCC;
+							text-decoration: underline;
+						}
+					}
+				}
+			}
+		}
+	}
+	.bdv-record-show {
+		background-color: #f0f0f0;		
+		.bdv-record-toggle i {
+			border-color: #666 #f0f0f0 #f0f0f0;
+		}
+		.bdv-record-main {
+			-webkit-box-shadow: 0px 2px 2px #f0f0f0;
+			-moz-box-shadow: 0px 2px 2px #f0f0f0;
+			box-shadow: 0px 2px 2px #f0f0f0;
+			_border-bottom: 2px solid #d1cfd0;
+			.bdv-record-content li:hover {
+				background: transparent;
+			}
+		}
+	}
+}

@@ -1,0 +1,2 @@
+rewrite ^\/commonapi\/pay\/pay_result_by_uid /test/common/api/pay_result_by_uid.php
+rewrite ^\/staticapi\/misadlist\.json /test/common/api/misadlist.php
